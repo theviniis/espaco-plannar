@@ -100,7 +100,7 @@ img {
 }
 
 /* INTRODUCAO */
-.introducao-img {
+.introducao-bg {
   height: 80vh;
   background: url(../img/banner-introducao.png) no-repeat center;
   background-size: cover;
@@ -158,12 +158,15 @@ img {
   height: 350px;
   align-self: center;
 }
-.quote-bg blockquote {
+.quote blockquote {
   grid-auto-flow: row;
-  padding: 20px;
+  padding: 0px 100px;
   font-size: 3.5em;
   color: white;
-}
-.teste {
   align-self: center;
+}
+.quote-bg cite {
+  color: white;
+  font-size: 3.5em;
+  font-style: normal;
 }
