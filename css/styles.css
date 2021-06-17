@@ -25,6 +25,30 @@ img {
 }
 
 /* GRID GERAL */
+.grid {
+  display: grid;
+  grid-column: 2;
+  max-width: 1640px;
+  margin: 0 auto;
+}
+.col-span {
+  grid-column: span 2;
+}
+.col-1 {
+  grid-column: 1;
+}
+.col-2 {
+  grid-column: 2;
+}
+.row-span {
+  grid-row: span 2;
+}
+.row-1 {
+  grid-row: 1;
+}
+.row-2 {
+  grid-row: 2;
+}
 
 /* HEADER */
 .header {
@@ -78,36 +102,19 @@ img {
 .container p {
   display: block;
   margin: 0;
-  position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
   padding: 15px;
   font-size: 40px;
   line-height: 1;
   color: #127e7b;
-  max-width: calc(1640px / 2);
 }
 
 /* QUEBRA */
 .quebra {
+  margin: 15px 0;
   background: url(../img/quebra-linha.png) no-repeat center;
   background-size: cover;
   height: 400px;
 }
 
 /* QUEM-SOU */
-.quem-sou {
-  display: grid;
-  grid-column: 2;
-  max-width: 1640px;
-  margin: 0 auto;
-}
-.quem-sou h1 {
-  grid-column: span 2;
-}
-.col-1 {
-  grid-column: 1;
-}
-.col-2 {
-  grid-column: 2;
-}
