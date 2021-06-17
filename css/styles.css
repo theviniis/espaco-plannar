@@ -27,7 +27,8 @@ img {
 /* GRID GERAL */
 .grid {
   display: grid;
-  grid-column: 2;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vw;
   max-width: 1640px;
   margin: 0 auto;
 }
@@ -53,6 +54,7 @@ img {
 /* HEADER */
 .header {
   background: transparent;
+  height: 20vh;
   padding: 30px 30px 0px 30px;
   align-items: center;
 }
@@ -67,10 +69,10 @@ img {
 .header a {
   color: #14817f;
 }
-.logo {
+.logo > img {
   font-size: 2.25em;
   font-weight: bold;
-  max-width: 250px;
+  max-width: 150px;
   margin: 0 auto 20px auto;
 }
 .header nav ul {
@@ -99,14 +101,17 @@ img {
   max-width: 1640px;
 }
 
-.container p {
-  display: block;
-  margin: 0;
-  top: 50%;
-  padding: 15px;
-  font-size: 40px;
+.introducao p {
+  text-align: center;
+  font-size: 2.3em;
   line-height: 1;
   color: #127e7b;
+
+  /* margin: 0; */
+  /* display: block; */
+  /* padding: 40px 40px 0px 40px; */
+  align-self: center;
+  /* position: absolute; */
 }
 
 /* QUEBRA */
@@ -118,3 +123,6 @@ img {
 }
 
 /* QUEM-SOU */
+.quem-sou p {
+  padding: 50px;
+}
