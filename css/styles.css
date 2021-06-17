@@ -1,4 +1,8 @@
 /* RESET */
+* {
+  box-sizing: border-box;
+}
+
 body,
 p,
 h1,
@@ -8,6 +12,9 @@ blockquote {
   padding: 0px;
   margin: 0px;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Vollkorn", Georgia, Serif;
 }
@@ -15,8 +22,17 @@ li {
   list-style: none;
 }
 a {
+  /* background-color: ;
+  color: ;
+  text-align: ; */
   text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
 }
+a:hover {
+  opacity: 0.6;
+}
+
 img {
   display: block;
   width: 100%;
@@ -25,11 +41,11 @@ img {
 
 /* GRID GERAL */
 .container {
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   display: grid;
-  grid-gap: 1rem;
   margin: 0 auto;
   max-width: 1640px;
+  /* grid-auto-rows: 1fr; */
 }
 .col-span {
   grid-column: 1 / -1;
@@ -50,17 +66,18 @@ img {
 
 /* HEADER */
 .header {
-  background: transparent;
-  height: 20%;
-  padding: 30px 30px 0px 30px;
+  background: tomato;
+  height: 20vh;
+  padding-top: 10px;
   align-items: center;
 }
 .header a {
   color: #14817f;
 }
-.logo > img {
+.logo img {
   max-width: 200px;
 }
+
 .header nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -69,19 +86,30 @@ img {
 .header nav a {
   font-size: 1.4em;
   display: block;
-  padding: 10px;
+  padding: 0.8rem;
   text-transform: lowercase;
+}
+.menu {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
 
 /* INTRODUCAO */
-.introducao {
-  height: 81vh;
+.introducao-img {
+  height: 80vh;
   background: url(../img/banner-introducao.png) no-repeat center;
   background-size: cover;
-  padding: 0px calc((100% - 1640px) / 2);
+}
+.introducao-container {
+  height: 80vh;
 }
 
-.introducao p {
+.introducao-container p {
   text-align: center;
   font-size: 2.3em;
   line-height: 1;
@@ -95,22 +123,47 @@ img {
   background-size: cover;
   height: 300px;
   margin: 0px auto;
-  padding: 30px calc((100% - 1640px) / 2);
 }
 
 /* QUEM-SOU */
+.quem-sou {
+  gap: 2rem;
+  margin-bottom: 40px;
+}
 .quem-sou h2 {
   text-align: center;
+  padding: 2rem;
+  font-size: 2.5rem;
+  color: #127e7b;
+  letter-spacing: 62;
+  line-height: 1.2;
 }
 .quem-sou p {
+  padding-right: 5rem;
   font-size: 1.75em;
   line-height: 1.5;
   letter-spacing: 28;
   color: #127e7b;
 }
-.quem-sou p:nth-child(2) {
-  grid-row: span 2;
-}
 .quem-sou img {
   max-width: 100%;
+}
+
+/* QUOTE */
+.quote-bg {
+  height: 350px;
+  background-color: #127e7b;
+}
+.quote {
+  height: 350px;
+  align-self: center;
+}
+.quote-bg blockquote {
+  grid-auto-flow: row;
+  padding: 20px;
+  font-size: 3.5em;
+  color: white;
+}
+.teste {
+  align-self: center;
 }
