@@ -20,7 +20,7 @@ a {
 img {
   display: block;
   max-width: 100px;
-  /* width: 100%; */
+  width: 100%;
   /* image-rendering: pixelated; */
 }
 
@@ -34,6 +34,7 @@ img {
 }
 .col-span {
   grid-column: span 2;
+  justify-content: center;
 }
 .col-1 {
   grid-column: 1;
@@ -70,10 +71,8 @@ img {
   color: #14817f;
 }
 .logo > img {
-  font-size: 2.25em;
-  font-weight: bold;
-  max-width: 150px;
-  margin: 0 auto 20px auto;
+  max-width: 200px;
+  margin: 0 auto;
 }
 .header nav ul {
   display: flex;
@@ -90,10 +89,10 @@ img {
 /* INTRODUCAO */
 .introducao {
   width: 100%;
-  height: 78vh;
+  height: 80vh;
   background: url(../img/banner-introducao.png) no-repeat center;
   background-size: cover;
-  position: relative;
+  padding: 60px calc((100% - 1640px) / 2);
 }
 
 .container {
@@ -106,23 +105,31 @@ img {
   font-size: 2.3em;
   line-height: 1;
   color: #127e7b;
-
-  /* margin: 0; */
-  /* display: block; */
-  /* padding: 40px 40px 0px 40px; */
   align-self: center;
-  /* position: absolute; */
 }
 
 /* QUEBRA */
 .quebra {
-  margin: 15px 0;
   background: url(../img/quebra-linha.png) no-repeat center;
   background-size: cover;
-  height: 400px;
+  height: 300px;
+  margin: 0px auto;
+  padding: 30px calc((100% - 1640px) / 2);
 }
 
 /* QUEM-SOU */
+.quem-sou h2 {
+  text-align: center;
+}
 .quem-sou p {
-  padding: 50px;
+  font-size: 1.75em;
+  line-height: 1.5;
+  letter-spacing: 28;
+  color: #127e7b;
+}
+.quem-sou p:nth-child(2) {
+  grid-row: span 2;
+}
+.quem-sou img {
+  max-width: 100%;
 }
