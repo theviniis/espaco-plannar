@@ -1,5 +1,6 @@
 :root {
-  --width-max: 1640px;
+  --containerWidth: 960px;
+  --verdeNoventa: #14817f;
 }
 
 /* RESET */
@@ -27,7 +28,6 @@ li {
 }
 a {
   /* background-color: ;
-  color: ;
   text-align: ; */
   text-decoration: none;
   display: inline-block;
@@ -42,13 +42,22 @@ img {
   width: 100%;
   /* image-rendering: pixelated; */
 }
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+  color: var(--verdeNoventa);
+}
 
 /* GRID GERAL */
 .container {
   grid-template-columns: repeat(2, 1fr);
   display: grid;
   margin: 0 auto;
-  max-width: var(--width-max);
+  max-width: var(--containerWidth);
+  background-color: rgb(0, 0, 0, 0.1);
 }
 .col-span {
   grid-column: 1 / -1;
@@ -74,22 +83,25 @@ img {
   align-items: center;
 }
 .header {
-  height: 20vh;
-  display: flex;
+  grid-template-rows: 20vh;
   justify-content: space-between;
   align-items: center;
 }
-.header a {
-  color: #14817f;
-  max-width: 200px;
+.logo {
+  color: var(--verdeNoventa);
+  max-width: 180px;
 }
-.header nav ul {
+.menu {
+  color: var(--verdeNoventa);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 1rem;
   font-size: 1.4em;
   text-transform: lowercase;
+}
+.menu ul {
+  display: flex;
+  gap: 1rem;
 }
 
 /* INTRODUCAO */
@@ -99,7 +111,7 @@ img {
   background-size: cover;
 }
 .introducao-container {
-  height: 80vh;
+  grid-template-rows: 80vh;
 }
 
 .introducao-container p {
@@ -111,24 +123,26 @@ img {
 }
 
 /* QUEBRA */
-.quebra {
+.quebra-img {
   background: url(../img/quebra-linha.png) no-repeat center;
   background-size: cover;
-  height: 300px;
+}
+.quebra {
+  grid-template-rows: 300px;
   margin: 0px auto;
 }
 
 /* QUEM-SOU */
 .quem-sou {
   gap: 2rem;
-  margin-bottom: 40px;
+  padding-bottom: 50px;
+  grid-template-rows: minmax(000px, 1fr);
 }
 .quem-sou h2 {
   text-align: center;
-  padding: 2rem;
   font-size: 2.5rem;
   color: #127e7b;
-  letter-spacing: 62;
+  letter-spacing: 1px;
   line-height: 1.2;
 }
 .quem-sou p {
@@ -144,22 +158,17 @@ img {
 
 /* QUOTE */
 .quote-bg {
-  height: 350px;
   background-color: #127e7b;
 }
 .quote {
-  height: 350px;
+  grid-template-rows: minmax(40px, 350px);
 }
-.quote blockquote {
-  grid-auto-flow: row;
-  padding: 0px 200px;
+.citacao {
+  align-self: center;
+  padding: 30px 200px;
   font-size: 2.5em;
   color: white;
-  align-self: center;
 }
-.quote-bg cite {
-  margin-top: 50px;
-  color: white;
-  font-size: 1em;
+.citacao cite {
   font-style: normal;
 }
