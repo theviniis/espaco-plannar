@@ -1,3 +1,7 @@
+:root {
+  --width-max: 1640px;
+}
+
 /* RESET */
 * {
   box-sizing: border-box;
@@ -44,7 +48,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   display: grid;
   margin: 0 auto;
-  max-width: 1640px;
+  max-width: var(--width-max);
 }
 .col-span {
   grid-column: 1 / -1;
@@ -64,38 +68,28 @@ img {
 }
 
 /* HEADER */
-.header {
+.header-bg {
   background: tomato;
   height: 20vh;
-  padding-top: 10px;
+  align-items: center;
+}
+.header {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .header a {
   color: #14817f;
-}
-.logo img {
   max-width: 200px;
 }
-
 .header nav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-}
-.header nav a {
+  justify-content: flex-end;
+  gap: 1rem;
   font-size: 1.4em;
-  display: block;
-  padding: 0.8rem;
   text-transform: lowercase;
-}
-.menu {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
 }
 
 /* INTRODUCAO */
