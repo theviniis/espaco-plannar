@@ -1,0 +1,46 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Vollkorn", Georgia, Serif;
+}
+li {
+  list-style: none;
+}
+a {
+  /* background-color: ;
+  text-align: ; */
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+a:hover {
+  opacity: 0.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+  /* image-rendering: pixelated; */
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+  color: var(--verdeNoventa);
+}

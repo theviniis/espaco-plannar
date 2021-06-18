@@ -1,63 +1,18 @@
+@import url(reset.css);
 :root {
-  --containerWidth: 960px;
+  --maxWidth: 1640px;
   --verdeNoventa: #14817f;
 }
 
-/* RESET */
-* {
-  box-sizing: border-box;
-}
-
-body,
-p,
-h1,
-ul,
-li,
-blockquote {
-  padding: 0px;
-  margin: 0px;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: "Vollkorn", Georgia, Serif;
-}
-li {
-  list-style: none;
-}
-a {
-  /* background-color: ;
-  text-align: ; */
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s;
-}
-a:hover {
-  opacity: 0.6;
-}
-
-img {
-  display: block;
-  width: 100%;
-  /* image-rendering: pixelated; */
-}
-p,
-a,
-h1,
-h2,
-h3,
-h4 {
-  color: var(--verdeNoventa);
-}
-
 /* GRID GERAL */
-.container {
-  grid-template-columns: repeat(2, 1fr);
+.estrutura {
   display: grid;
-  margin: 0 auto;
-  max-width: var(--containerWidth);
   background-color: rgb(0, 0, 0, 0.1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr min(var(--maxWidth), 100%) 1fr;
 }
 .col-span {
   grid-column: 1 / -1;
@@ -77,25 +32,26 @@ h4 {
 }
 
 /* HEADER */
-.header-bg {
+.header {
+  width: 100%;
   background: tomato;
   height: 20vh;
-  align-items: center;
 }
-.header {
-  grid-template-rows: 20vh;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .logo {
   color: var(--verdeNoventa);
   max-width: 180px;
 }
+.logo img {
+  display: block;
+}
 .menu {
+  grid-column: 2 / 3;
   color: var(--verdeNoventa);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.4em;
   text-transform: lowercase;
 }
@@ -105,16 +61,19 @@ h4 {
 }
 
 /* INTRODUCAO */
-.introducao-bg {
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, calc(var(--maxWidth) / 2)) 1fr;
   height: 80vh;
   background: url(../img/banner-introducao.png) no-repeat center;
   background-size: cover;
 }
-.introducao-container {
-  grid-template-rows: 80vh;
+.introducao p + p {
+  margin-top: 1em;
 }
-
-.introducao-container p {
+.intro-txt {
+  grid-column: 2 / 3;
+  max-width: var(--maxWidth);
   text-align: center;
   font-size: 2.3em;
   line-height: 1;
