@@ -1,0 +1,30 @@
+:root {
+  --maxWidth: 80vw;
+}
+.grid-2-container {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(calc(var(--maxWidth) / 4), calc(var(--maxWidth) / 2))
+  );
+  justify-content: center;
+}
+.full-bleed {
+  grid-column: 1 / -1;
+  align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-2-container,
+  .grid-2 {
+    grid-template-columns: 80%;
+  }
+  .quem-sou .quem-sou .col-2 p {
+    padding-bottom: 0;
+  }
+  .depoimentos {
+  }
+  .apresentação {
+    max-width: 80vw;
+  }
+}

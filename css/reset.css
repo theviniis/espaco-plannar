@@ -1,4 +1,7 @@
 /* RESET */
+:root {
+  --verdeNoventa: #14817f;
+}
 * {
   box-sizing: border-box;
 }
