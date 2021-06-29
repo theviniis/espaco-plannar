@@ -1,0 +1,89 @@
+/* header */
+.header-bg {
+  background-color: white;
+  width: 100%;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 25vh;
+  padding-top: calc(var(--gap) * 2);
+  padding-bottom: calc(var(--gap) * 2);
+}
+.logo {
+  max-width: 18.75em;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) * 4);
+  color: var(--verdeNoventa);
+  font-size: 2.2em;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+/* banner */
+.banner-bg {
+  background-image: url(img/banner-img@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  align-items: center;
+  height: 75vh;
+  text-align: center;
+}
+.banner p {
+  color: var(--verdeNoventa);
+  font-size: 2.5em;
+}
+.banner p + p {
+  margin-top: var(--gap);
+}
+.arrow-nxt {
+  grid-column: 4;
+}
+
+/* quebra */
+.quebra {
+  display: grid;
+  align-items: flex-end;
+  background-image: url(img/linha.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 316px;
+  margin-top: calc(var(--gap) * 4);
+}
+/* quem sou */
+.quem-sou {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: calc(var(--gap) * 5);
+}
+.quem-sou h2 {
+  text-align: center;
+}
+
+.quem-sou div {
+  padding: 0 calc(var(--gap) * 10);
+}
+
+.quem-sou p + p {
+  padding-top: calc(var(--gap) * 2);
+}
+.quem-sou-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: calc(var(--gap) * 5);
+  padding: 0 !important;
+}
+.quem-sou img {
+  border-radius: 5px;
+  max-width: 100%;
+}
