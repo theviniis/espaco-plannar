@@ -2,6 +2,7 @@
 .header-bg {
   background-color: white;
   width: 100%;
+  position: fixed;
 }
 .header {
   display: flex;
@@ -27,6 +28,7 @@
 
 /* banner */
 .banner-bg {
+  margin-top: 25vh;
   background-image: url(img/banner-img@2x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
