@@ -7,15 +7,13 @@
   grid-column-gap: 32px;
   row-gap: var(--gap);
 }
-
 .wrapper > * {
   grid-column: 2;
 }
 .full-bleed {
-  /* width: 100%; */
+  width: 100%;
   grid-column: 1 / -1;
 }
-
 .grid-2-container {
   display: grid;
   grid-template-columns: repeat(

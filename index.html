@@ -25,6 +25,13 @@
     <link rel="stylesheet" href="css/global-styles.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="css/simple-slide.css" />
+    c
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
   <body>
     <header class="header-bg">
@@ -33,9 +40,7 @@
           ><img class="logo" src="img/logo.svg" alt="Espaço Plannar"
         /></a>
         <ul class="menu">
-          <li>
-            <strong><a href="#">Início</a></strong>
-          </li>
+          <li><a href="#">Início</a></li>
           <li><a href="#quem-sou">Quem sou eu</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -60,8 +65,11 @@
       </div>
     </article>
 
+    <!-- linha de quebra -->
     <div class="quebra"></div>
-    <section class="container quem-sou">
+
+    <!-- inicio da section quem-sou -->
+    <section class="container quem-sou" id="quem-sou">
       <h2 class="titulo full-bleed">Quem sou eu</h2>
       <div class="col-1">
         <p>
@@ -108,12 +116,102 @@
           humana, pois sei que cada um pode transformar o outro com um simples
           toque de generosidade.
         </p>
-        <div class="quem-sou-img">
-          <span class="material-icons icons arrow-bfr"> navigate_before </span>
+      </div>
+      <div class="quem-sou-img col-2">
+        <span class="material-icons icons arrow-bfr"> navigate_before </span>
+        <div data-slide="quem-sou">
           <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" />
-          <span class="material-icons icons arrow-nxt"> navigate_next </span>
+          <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" />
         </div>
+        <span class="material-icons icons arrow-nxt"> navigate_next </span>
       </div>
     </section>
+
+    <article class="quote-bg">
+      <div class="quote container">
+        <blockquote>
+          "Um dia desses, eu separo um tempinho e ponho em dia todos os choros
+          que não tenho tido tempo de chorar."
+        </blockquote>
+        <cite>𝘋𝘳𝘶𝘮𝘮𝘰𝘯𝘥 </cite>
+      </div>
+    </article>
+
+    <section class="depoimentos-section">
+      <h2 class="depoimentos-titulo titulo">Depoimentos</h2>
+      <ul class="depoimentos">
+        <div class="depoimento">
+          <blockquote>
+            "A psicóloga Ana Paula é uma excelente profissional, ela respeita
+            seu momento e com muito profissionalismo trata das suas dores
+            emocionais de maneira sensível e cuidadosa. Está sempre buscando
+            conhecimentos Tecnico científicos para aprimorar a sessões de
+            terapia usando técnicas funcionais para eu lidar com as crises! Sou
+            muito grata a ela"
+          </blockquote>
+          <cite>K.A</cite>
+        </div>
+
+        <span class="material-icons icons arrow-bfr"> navigate_before </span>
+
+        <div class="depoimento">
+          <blockquote>
+            "A psicóloga Ana Paula é uma excelente profissional, ela respeita
+            seu momento e com muito profissionalismo trata das suas dores
+            emocionais de maneira sensível e cuidadosa. Está sempre buscando
+            conhecimentos Tecnico científicos para aprimorar a sessões de
+            terapia usando técnicas funcionais para eu lidar com as crises! Sou
+            muito grata a ela"
+          </blockquote>
+          <cite>K.A</cite>
+        </div>
+
+        <span class="material-icons icons arrow-nxt"> navigate_next </span>
+
+        <div class="depoimento">
+          <blockquote>
+            "A psicóloga Ana Paula é uma excelente profissional, ela respeita
+            seu momento e com muito profissionalismo trata das suas dores
+            emocionais de maneira sensível e cuidadosa. Está sempre buscando
+            conhecimentos Tecnico científicos para aprimorar a sessões de
+            terapia usando técnicas funcionais para eu lidar com as crises! Sou
+            muito grata a ela"
+          </blockquote>
+          <cite>K.A</cite>
+        </div>
+      </ul>
+    </section>
+
+    <section class="apresentacao">
+      <div class="apresentacao-img"></div>
+      <div class="apresentacao-conteudo">
+        <h2>O que é essa tão famosa psicoterapia?</h2>
+        <p>
+          A psicoterapia é uma ferramenta que tem como proposta auxiliar no
+          processo de autoconhecimento é um GPS que te leva a um encontro
+          consigo mesmo, é conhecida também como um processo de “cura pela fala”
+          e te auxilia a compreender a sua história de vida, perceber e entender
+          a sua real responsabilidade neste palco da vida. Entendo o que
+          acontece e onde contribuímos mesmo sem perceber para as dificuldades
+          diárias. O processo de psicoterapia te ajuda a romper ciclos viciosos,
+          superar limitações, lidar com transtornos mentais, problemas
+          psicológicos e fazer movimentos de mudança necessárias para encontrar
+          a felicidade. O processo de terapia pode ocorrer semanalmente ou
+          quinzenalmente, cada sessão tem a duração de 50min o atendimento pode
+          ser feito tanto presencial ou online. A modalidade On-line é ideal
+          para quem tem dificuldade locomoção, pretende otimizar o tempo ou mora
+          em outro país, estado ou cidade. Por dependermos apenas de um local
+          reservado, fone de ouvido e uma boa conexão com a internet, é possível
+          fazer a sua terapia em qualquer local do mundo, através dos
+          aplicativos Skype, Meet, Duo ou Whatssap.
+        </p>
+      </div>
+      <div class="apresentacao-passaro"></div>
+
+      <!-- <img src="img/apresentacao@2x.jpg" alt="" /> -->
+    </section>
+
+    <script src="js/simple-slide.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
