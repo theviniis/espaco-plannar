@@ -147,8 +147,8 @@
   margin-top: calc(var(--gap) * 4);
   display: grid;
   grid-template-columns: repeat(8, 1fr) 1fr;
-  grid-template-rows: 1.4fr repeat(4, 1fr) 0.5fr;
-  height: 1080px;
+  grid-template-rows: 1.5fr repeat(4, 1fr) 0.3fr;
+  height: 100vh;
 }
 .apresentacao-img {
   background-image: url(img/apresentacao@2x.jpg);
@@ -161,8 +161,8 @@
   grid-column: 5/9;
   grid-row: 1/-1;
   padding-left: calc(var(--gap) * 8);
-  padding-top: calc(var(--gap) * 4);
   font-size: 1em;
+  align-self: center;
 }
 .apresentacao-conteudo h2 {
   margin-bottom: calc(var(--gap) * 6);
