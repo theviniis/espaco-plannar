@@ -2,14 +2,14 @@
 
 :root {
   /* container width */
-  --minWidth: 130ch;
+  --minWidth: 80vw;
 
   /* font */
   --fontFamP: "Calibri", sans-serif;
   --fontFamTitulo: "Baskervville", serif;
   --fontFamQuote: "Regalhisa";
   --fontColCinza: #444;
-  --fontSize1: 1.2rem;
+  --fontSize1: 1.25rem;
   --fontSize2: 1.8rem;
   --fontSize3: 2.75rem;
 
@@ -23,9 +23,7 @@
 
 /* Global Styles */
 body {
-  font-family: var(--bodyColor);
-  /* display: flex; */
-  /* flex-direction: column; */
+  background-color: var(--bodyColor);
 }
 p {
   color: var(--fontColCinza);
