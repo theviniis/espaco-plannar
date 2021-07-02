@@ -103,64 +103,54 @@
 .quote-bg {
   background-color: var(--verdeNoventa);
   color: white;
-  height: 250px;
   text-align: center;
 }
 .quote {
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: calc(var(--gap) * 2);
+  max-width: 60%;
   height: 100%;
+  font-size: var(--fontSize2);
 }
 .quote blockquote {
-  font-size: var(--fontSize2);
   font-family: var(--fontFamTitulo);
 }
 .quote cite {
   font-family: var(--fontFamP);
-  font-size: calc(var(--fontSize1) + 0.3rem);
+  font-size: calc(var(--fontSize2) - 0.2rem);
   font-style: normal;
 }
 /* --------------- depoimentos ---------------*/
-.depoimentos-section {
-  display: grid;
-  grid-auto-flow: row;
+.depoimentos {
   margin-top: calc(var(--gap) * 4);
   min-height: 30vh;
-  overflow-x: hidden;
-  position: relative;
-  cursor: pointer;
+  max-width: 100%;
 }
-.depoimentos-section h2 {
+.depoimentos h2 {
   text-align: center;
+  margin-bottom: calc(var(--gap) * 4);
 }
-.depoimentos {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 0.7fr 0.1fr 1fr 0.1fr 0.7fr;
-  gap: calc(var(--gap) * 10);
-  font-size: var(--fontSize1);
-  min-width: 125%;
-  position: absolute;
-  top: 25%;
-  left: -14%;
-}
-.depoimento cite {
-  justify-content: flex-end;
-}
-
-.depoimentos blockquote {
-  text-align: center;
+.depoimento {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--fontSize1) + 0.2rem);
+  justify-content: center;
   font-family: var(--fontFamP);
+}
+.depoimento blockquote {
+  text-align: center;
   color: var(--fontColCinza);
 }
-.depoimentos cite {
+.depoimento cite {
+  margin-top: calc(var(--gap) * 2);
   color: var(--verdeNoventa);
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
-  text-align: left;
+  align-self: flex-end;
 }
 
 /* apresentação */
@@ -169,9 +159,12 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr) 1fr;
   grid-template-rows: 1.5fr repeat(4, 1fr) 0.3fr;
-  min-height: 80vh;
+}
+.apresentacao p {
+  font-size: calc(var(--fontSize1) + 0.2rem);
 }
 .apresentacao-img {
+  min-height: 80vh;
   background-image: url(img/apresentacao@2x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
