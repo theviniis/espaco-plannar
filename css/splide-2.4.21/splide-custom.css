@@ -1,7 +1,7 @@
 .custom-arrows {
-  width: 80ch;
+  width: 57vw;
   position: absolute;
-  left: 51.2%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
