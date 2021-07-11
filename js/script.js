@@ -1,12 +1,32 @@
+
+
 document.addEventListener( 'DOMContentLoaded', function () {
   new Splide( '.depoimentos', {
-    type   : 'loop',
-    padding: {
-      right: '30rem',
-      left : '30rem',
-    },
-    pauseOnHover:true,
+    easing: 'ease-in-out',
+    // fixedWidth: '800px',
+    focus: 'center',
+    gap: '15ch',
     pagination: false,
-    gap: 140,
+	  perPage  : 2,
+    start: 1,
+	  trimSpace: false,
+    type: 'slide',
+    classes: {
+      arrows: 'splide__arrows custom-arrows',
+    }
   } ).mount();
+
+
+
+  window.addEventListener("scroll",function(){
+    var header = document.querySelector("header");
+
+    header.classList.toggle("sticky", window.scrollY > 0)
+
+    console.log(header);
+
+  });
 } );
+
+
+
