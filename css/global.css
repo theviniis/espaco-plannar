@@ -1,0 +1,110 @@
+/*  */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bodyColor);
+  color: var(--fontColCinza);
+  line-height: 1.5;
+  font-family: var(--fontFamP);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  color: var(--verdeNoventa);
+}
+a:hover {
+  opacity: 0.6;
+}
+img {
+  display: block;
+  max-width: 100%;
+  /* image-rendering: pixelated; */
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  color: var(--verdeNoventa);
+  font-family: var(--fontFamT);
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+p,
+a,
+blockquote,
+cite {
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
+}
+h1 {
+  --fluid-type-min: 2.5rem;
+  --fluid-type-max: 5rem;
+  --fluid-type-target: 5vw;
+
+  /* max-width: 15ch; */
+}
+h2 {
+  --fluid-type-min: 1.8rem;
+  --fluid-type-max: 3rem;
+}
+h3 {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 2.5rem;
+}
+h2,
+h3 {
+  /* max-width: 30ch; */
+}
+p {
+  --fluid-type-min: 1rem;
+  --fluid-type-max: 1.25rem;
+  /* max-width: 60ch; */
+}
+blockquote {
+  --fluid-type-min: 1rem;
+  --fluid-type-max: 1.8rem;
+}
+cite {
+  font-style: normal;
+  --fluid-type-min: 0.8rem;
+  --fluid-type-max: 1.7rem;
+}
+
+/* Other stuff */
+.container {
+  max-width: var(--minWidth);
+  margin: 0 auto;
+}
+.icons {
+  font-size: 45px;
+  color: var(--verdeNoventa);
+  cursor: pointer;
+}
+.btn {
+  border-radius: 30px;
+  background-color: var(--verdeNoventa);
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  padding: var(--gap) calc(var(--gap) * 4) var(--gap) calc(var(--gap) * 4);
+  font-size: var(--fontSize1);
+  font-family: var(--fontFamP);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: white;
+  min-width: min-content;
+}

@@ -1,13 +1,14 @@
 /* header */
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   background-color: var(--bodyColor);
-  position: fixed;
+  position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: -10vh;
 
   min-height: 20vh;
   padding: calc(var(--gap) * 2) calc((100vw - var(--minWidth)) / 2);
@@ -15,26 +16,16 @@
   z-index: 10;
   width: 100%;
 }
-.header.sticky {
-  min-height: 5vh;
-  padding: calc(var(--gap) * 1) calc((100vw - var(--minWidth)) / 2);
-}
-.header.sticky .logo {
-  max-width: 6rem;
-}
 .logo {
-  flex: 1;
-  max-width: 12rem;
+  flex: 1 1 10px;
+  max-width: 10rem;
   transition: 0.2s ease-in-out;
 }
 .menu {
   position: relative;
   flex: 2;
-  color: var(--verdeNoventa);
   display: flex;
-  font-family: var(--fontFamP);
-  font-size: var(--fontSize2);
-  gap: calc(var(--gap) * 6);
+  gap: calc(var(--gap) * 5);
   letter-spacing: 2px;
   justify-content: flex-end;
   text-transform: lowercase;
@@ -42,36 +33,35 @@
 }
 .menu li a {
   padding: var(--gap);
+  --fluid-type-max: 1.8rem;
 }
 
-/* banner */
+/* --------------- banner ---------------*/
 .banner-bg {
-  background-image: url(img/banner-img@2x.jpg);
+  background-image: url(img/banner.png);
   background-color: var(--bodyColor);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .banner {
-  margin-top: 20vh;
   display: grid;
-  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-  column-gap: calc(var(--gap) * 4);
+  grid-template-columns: min(71ch, 100%) 1fr;
+  place-items: center;
   align-items: center;
   min-height: 80vh;
   text-align: center;
 }
-.banner p {
+.banner h3 {
   color: var(--verdeNoventa);
-  font-size: var(--fontSize2);
+  --fluid-type-max: 1.8rem;
+  font-family: var(--fontFamP);
 }
-.banner p + p {
-  margin-top: var(--gap);
-}
-.banner span:last-of-type {
-  grid-column: 4;
+.banner h3 + h3 {
+  margin-top: calc(var(--gap) * 2);
 }
 
-/* quebra */
+/* --------------- quebra ---------------*/
+
 .quebra {
   display: grid;
   align-items: flex-end;
@@ -82,7 +72,8 @@
   min-width: 100%;
   margin-top: calc(var(--gap) * 4);
 }
-/* quem sou */
+/* --------------- quem sou ---------------*/
+
 .quem-sou {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -92,9 +83,8 @@
 .quem-sou > div {
   padding: 0 calc(var(--gap) * 4);
 }
-.quem-sou h2 {
+.quem-sou h3 {
   margin-bottom: calc(var(--gap) * 4);
-  text-align: center;
 }
 .quem-sou p + p {
   padding-top: calc(var(--gap) * 3);
@@ -110,11 +100,11 @@
   max-width: 80%;
 }
 
-/* quote */
+/* --------------- quote ---------------*/
 .quote-bg {
   background-color: var(--verdeNoventa);
-  color: white;
   text-align: center;
+  color: white;
 }
 .quote {
   min-height: 30vh;
@@ -122,34 +112,22 @@
   flex-direction: column;
   justify-content: center;
   gap: calc(var(--gap) * 2);
-  max-width: 60%;
-  height: 100%;
-  font-size: var(--fontSize2);
+  max-width: 50%;
 }
-.quote blockquote {
-  font-family: var(--fontFamTitulo);
-}
-.quote cite {
-  font-family: var(--fontFamP);
-  font-size: calc(var(--fontSize2) - 0.2rem);
-  font-style: normal;
-}
+
 /* --------------- depoimentos ---------------*/
 .depoimentos {
   margin-top: calc(var(--gap) * 4);
   min-height: 30vh;
   max-width: 100%;
 }
-.depoimentos h2 {
-  text-align: center;
+.depoimentos h3 {
   margin-bottom: calc(var(--gap) * 4);
 }
 .depoimento {
   display: flex;
   flex-direction: column;
-  font-size: var(--fontSize1);
   justify-content: center;
-  font-family: var(--fontFamP);
 }
 .depoimento blockquote {
   text-align: center;
@@ -171,9 +149,7 @@
   grid-template-columns: repeat(8, 1fr) 1fr;
   grid-template-rows: 1.5fr repeat(4, 1fr) 0.3fr;
 }
-.apresentacao p {
-  font-size: calc(var(--fontSize1) + 0.2rem);
-}
+
 .apresentacao-img {
   min-height: 95vh;
   background-image: url(img/apresentacao@2x.jpg);
@@ -188,7 +164,7 @@
   padding-left: calc(var(--gap) * 8);
   align-self: center;
 }
-.apresentacao-conteudo h2 {
+.apresentacao-conteudo h3 {
   margin-bottom: calc(var(--gap) * 6);
 }
 .apresentacao-passaro {
@@ -240,8 +216,9 @@
   column-gap: calc(var(--gap) * 5);
   place-items: center;
 }
-.investimento h2,
+.investimento h3,
 .investimento p {
+  text-align: left;
   color: white;
 }
 .investimento .col-1 {
@@ -265,15 +242,6 @@
   .header {
     grid-template-columns: 1fr;
     place-items: center;
-  }
-  .menu {
-    padding-top: calc(var(--gap) * 2);
-  }
-  .banner {
-    grid-template-columns: 0.1fr 1fr 0.1fr;
-  }
-  .banner span:last-of-type {
-    grid-column: 3;
   }
   .quem-sou {
     grid-template-columns: 1fr;

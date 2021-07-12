@@ -1,0 +1,26 @@
+/* Variaveis */
+:root {
+  /* container width */
+  --minWidth: 80vw;
+
+  /* font */
+  --fontFamP: "Calibri", sans-serif;
+  --fontFamT: "Baskervville", serif;
+  --fontColCinza: #252525;
+  --fontSize1: 1.25rem;
+  --fontSize2: 1.8rem;
+  --fontSize3: 2.75rem;
+
+  /* colors */
+  --verdeNoventa: #127e7b;
+  --bodyColor: #f8f8f8;
+
+  /* Styles */
+  --gap: 8px;
+}
+
+@media (max-width: 550px) {
+  :root {
+    --minWidth: 90vw;
+  }
+}
