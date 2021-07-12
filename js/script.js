@@ -1,6 +1,17 @@
 
 
 document.addEventListener( 'DOMContentLoaded', function () {
+
+  new Splide( '.banner', {
+    easing: 'ease-in-out',
+    type: 'loop',
+    pagination: false,
+    classes: {
+      arrows: 'splide__arrows custom-arrows',
+    }
+  } ).mount();
+
+
   new Splide( '.depoimentos', {
     easing: 'ease-in-out',
     // fixedWidth: '800px',
@@ -17,11 +28,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
   } ).mount();
 
 
-
-  // window.addEventListener("scroll",function(){
-  //   var header = document.querySelector("header");
-  //   header.classList.toggle("sticky", window.scrollY > 0);
-  // });
 
 } );
 

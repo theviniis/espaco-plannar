@@ -37,23 +37,23 @@
 }
 
 /* --------------- banner ---------------*/
-.banner-bg {
-  background-image: url(img/banner.png);
-  background-color: var(--bodyColor);
+.banner_item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  grid-auto-rows: min-content;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.banner {
-  display: grid;
-  grid-template-columns: min(71ch, 100%) 1fr;
-  place-items: center;
-  align-items: center;
   min-height: 80vh;
-  text-align: center;
+  max-width: 100%;
+  padding: 0 calc((100vw - var(--minWidth)) / 2);
+}
+.banner_item > * {
+  grid-column: 1;
 }
 .banner h3 {
   color: var(--verdeNoventa);
-  --fluid-type-max: 1.8rem;
+  --fluid-type-max: 2rem;
   font-family: var(--fontFamP);
 }
 .banner h3 + h3 {
@@ -128,6 +128,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  text-align: center;
 }
 .depoimento blockquote {
   text-align: center;

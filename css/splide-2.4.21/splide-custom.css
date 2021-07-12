@@ -1,9 +1,20 @@
-.custom-arrows {
-  width: 57vw;
-  position: absolute;
+/* --------------- splide banner ---------------*/
+.banner .custom-arrows {
   left: 50%;
+  position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: var(--minWidth);
+  z-index: 2;
+}
+
+/* --------------- splide depoimentos ---------------*/
+.depoimentos .custom-arrows {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 57vw;
   z-index: 2;
 }
 .custom-arrows .splide__arrow {
@@ -21,8 +32,4 @@
 .splide__slide:not(.is-active) {
   opacity: 0.4;
   transform: scale(0.95);
-}
-
-.depoimento {
-  text-align: center;
 }
