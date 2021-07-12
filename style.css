@@ -45,11 +45,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 80vh;
-  max-width: 100%;
   padding: 0 calc((100vw - var(--minWidth)) / 2);
 }
 .banner_item > * {
   grid-column: 1;
+  padding-left: calc(var(--gap) * 10);
 }
 .banner h3 {
   color: var(--verdeNoventa);
