@@ -78,10 +78,14 @@
   min-height: 95vh;
 }
 .quem-sou > div {
-  padding: 0 calc(var(--gap) * 4);
+  /* padding: 0 calc(var(--gap) * 4); */
 }
 .quem-sou h3 {
   margin-bottom: calc(var(--gap) * 4);
+}
+
+.quem-sou p {
+  max-width: 60ch;
 }
 .quem-sou p + p {
   padding-top: calc(var(--gap) * 3);
@@ -94,7 +98,7 @@
   place-items: center;
   border-radius: 3px;
   padding: 0;
-  max-width: 80%;
+  max-width: 60ch;
 }
 
 /* --------------- quote ---------------*/
@@ -143,12 +147,10 @@
 
 /* apresentação */
 .apresentacao {
-  margin-top: calc(var(--gap) * 4);
   display: grid;
   grid-template-columns: repeat(8, 1fr) 1fr;
   grid-template-rows: 1.5fr repeat(4, 1fr) 0.3fr;
 }
-
 .apresentacao-img {
   min-height: 95vh;
   background-image: url(img/apresentacao@2x.jpg);
@@ -158,10 +160,14 @@
   grid-row: 1/-1;
 }
 .apresentacao-conteudo {
+  justify-self: center;
   grid-column: 5/9;
   grid-row: 1/-1;
   padding-left: calc(var(--gap) * 8);
   align-self: center;
+}
+.apresentacao-conteudo p {
+  max-width: 60ch;
 }
 .apresentacao-conteudo h3 {
   margin-bottom: calc(var(--gap) * 6);
