@@ -8,6 +8,9 @@
   z-index: 2;
 }
 
+.splide__arrow--next {
+  right: 0 !important;
+}
 /* --------------- splide depoimentos ---------------*/
 .depoimentos .custom-arrows {
   left: 50%;
@@ -17,6 +20,7 @@
   width: 57vw;
   z-index: 2;
 }
+
 .custom-arrows .splide__arrow {
   background-color: transparent;
 }

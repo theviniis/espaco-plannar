@@ -1,16 +1,28 @@
 
 
-document.addEventListener( 'DOMContentLoaded', function () {
-
-  new Splide( '.banner', {
-    // type: 'slide',
+document.addEventListener('DOMContentLoaded', function () {
+const splideBanner = new Splide( '.banner', {
+    type: 'slide',
     pagination: false,
     clones:false,
+    gap: 0,
+    focus:'center',
     classes: {
       arrows: 'splide__arrows custom-arrows',
     }
+  } );
+  splideBanner.mount();
 
-  } ).mount();
+  splideBanner.on('moved', function() {
+    const list = document.querySelector('.splide__list');
+    // const splideFirst = document.getElementById('splide01-slide01');
+    // if(splideFirst.classList.includes('is-active')) return;
+    // console.log('teste');
+    let style = window.getComputedStyle(list);
+    let matrix = new WebKitCSSMatrix(style.transform);
+    const transform = matrix.m41
+    list.style.transform = `translateX(${transform - 50}px)`;
+  } );
 
 
   new Splide( '.depoimentos', {
@@ -27,7 +39,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     }
   } ).mount();
 
-
+  
 
 } );
 
