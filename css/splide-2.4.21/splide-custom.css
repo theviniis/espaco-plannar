@@ -1,7 +1,7 @@
 /* --------------- splide banner ---------------*/
 .banner .custom-arrows {
-  left: 50%;
   position: absolute;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: var(--minWidth);
@@ -17,10 +17,15 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 57vw;
+  width: 55vw;
   z-index: 2;
 }
+.depoimentos .splide__slide:not(.is-active) {
+  opacity: 0.4;
+  transform: scale(0.96);
+}
 
+/* splide */
 .custom-arrows .splide__arrow {
   background-color: transparent;
 }
@@ -30,10 +35,6 @@
   fill: var(--verdeNoventa);
 }
 .splide__slide {
-  transition: transform 300ms ease-in;
+  transition: transform 200ms ease-in;
   transform: scale(1);
-}
-.splide__slide:not(.is-active) {
-  opacity: 0.4;
-  transform: scale(0.95);
 }

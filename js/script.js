@@ -1,31 +1,7 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
-const splideBanner = new Splide( '.banner', {
-    type: 'slide',
-    pagination: false,
-    clones:false,
-    gap: 0,
-    focus:'center',
-    classes: {
-      arrows: 'splide__arrows custom-arrows',
-    }
-  } );
-  splideBanner.mount();
-
-  splideBanner.on('moved', function() {
-    const list = document.querySelector('.splide__list');
-    // const splideFirst = document.getElementById('splide01-slide01');
-    // if(splideFirst.classList.includes('is-active')) return;
-    // console.log('teste');
-    let style = window.getComputedStyle(list);
-    let matrix = new WebKitCSSMatrix(style.transform);
-    const transform = matrix.m41
-    list.style.transform = `translateX(${transform - 50}px)`;
-  } );
 
 
-  new Splide( '.depoimentos', {
+  const splideDepoimentos = new Splide( '.depoimentos', {
     easing: 'ease-in-out',
     focus: 'center',
     gap: '15ch',
@@ -34,13 +10,25 @@ const splideBanner = new Splide( '.banner', {
     start: 1,
 	  trimSpace: false,
     type: 'slide',
+    padding: {
+      right: '2rem'
+    },
     classes: {
       arrows: 'splide__arrows custom-arrows',
     }
-  } ).mount();
-
+  } );
+  splideDepoimentos.mount();
   
-
+new Splide( '.banner', {
+      perPage  : 1,
+      pagination: false,
+      cover: true,
+      center: true,
+      height: '85vh',
+      classes: {
+              arrows: 'splide__arrows custom-arrows',
+      }
+    } ).mount();
 } );
 
 

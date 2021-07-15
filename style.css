@@ -10,7 +10,7 @@
   position: -webkit-sticky;
   top: -10vh;
 
-  min-height: 20vh;
+  min-height: 15vh;
   padding: calc(var(--gap) * 2) calc((100vw - var(--minWidth)) / 2);
   transition: 0.2s ease-in-out;
   z-index: 10;
@@ -39,17 +39,15 @@
 /* --------------- banner ---------------*/
 .banner_item {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-content: center;
   grid-auto-rows: min-content;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 80vh;
-  padding: 0 calc((100vw - var(--minWidth)) / 2);
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--gap) * 2);
+  place-content: center;
+  padding: 0 calc((100vw - var(--minWidth)) / 2 + 5vw);
+  width: auto;
 }
 .banner_item > * {
   grid-column: 1;
-  padding: 8px 0 8px calc(var(--gap) * 10);
 }
 .banner h3 {
   color: var(--verdeNoventa);
