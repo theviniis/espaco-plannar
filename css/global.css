@@ -1,4 +1,47 @@
-/*  */
+/* Variaveis */
+:root {
+  /* container width */
+  --minWidth: 80vw;
+  --minWidthP: calc((100vw - var(--minWidth)) / 2);
+
+  /* font */
+  --fontFamP: "Calibri", sans-serif;
+  --fontFamT: "Baskervville", serif;
+  --fontColCinza: #252525;
+  --fontSize1: 1.25rem;
+  --fontSize2: 1.8rem;
+  --fontSize3: 2.75rem;
+
+  /* colors */
+  --verdeNoventa: #127e7b;
+  --bodyColor: #f8f8f8;
+  --colCinza: #ececec;
+
+  /* Styles */
+  --gap: 8px;
+}
+
+@media (max-width: 550px) {
+  :root {
+    --minWidth: 90vw;
+  }
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Global Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -63,7 +106,7 @@ h2 {
 }
 h3 {
   --fluid-type-min: 1.5rem;
-  --fluid-type-max: 2.5rem;
+  --fluid-type-max: 2.7rem;
 }
 h2,
 h3 {
@@ -98,13 +141,14 @@ cite {
   border-radius: 30px;
   background-color: var(--verdeNoventa);
   border: none;
-  outline: 0;
-  cursor: pointer;
-  padding: var(--gap) calc(var(--gap) * 4) var(--gap) calc(var(--gap) * 4);
-  font-size: var(--fontSize1);
-  font-family: var(--fontFamP);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
   color: white;
+  cursor: pointer;
+  display: block;
+  font-family: var(--fontFamP);
+  font-size: var(--fontSize1);
+  letter-spacing: 0.1rem;
   min-width: min-content;
+  outline: 0;
+  padding: var(--gap) calc(var(--gap) * 4) var(--gap) calc(var(--gap) * 4);
+  text-transform: uppercase;
 }

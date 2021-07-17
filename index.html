@@ -15,28 +15,24 @@
       href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+
     <!-- css -->
     <link rel="stylesheet" href="css/splide-2.4.21/splide.min.css" />
     <link rel="stylesheet" href="css/splide-2.4.21/splide-default.min.css" />
     <link rel="stylesheet" href="css/splide-2.4.21/splide-custom.css" />
 
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/variaveis.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/grid.css" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- inicio do header -->
     <header class="header">
       <a href="#" class="logo"
-        ><img src="img/logo.svg" alt="Espaço Plannar"
+        ><img src="img/logo-timbrado.svg" alt="Espaço Plannar"
       /></a>
 
       <ul class="menu">
@@ -54,7 +50,7 @@
         <ul class="splide__list">
           <!-- banner 1 -->
           <li class="splide__slide banner_item">
-            <img src="img/banner.png" alt="" />
+            <img src="img/banner-img@2x.jpg" alt="" />
             <h3>
               Entendemos que todos podemos ser agentes de transformação no
               mundo.
@@ -96,14 +92,13 @@
     </div>
     <!-- fecha banner -->
 
-    <!-- inicio da quebra -->
-    <div class="quebra"></div>
-    <!-- final da quebra -->
+    <!-- abre quebra -->
+    <div class="quebra"><img src="img/linha-quebra.svg" alt="" /></div>
+    <!-- fecha da quebra -->
 
-    <!-- inicio da quemsou -->
+    <!-- abre quem sou -->
     <section class="quem-sou container" id="quem-sou">
       <h3 class="titulo full-bleed">Quem sou eu</h3>
-
       <div>
         <p>
           Sou filha de pais humildes, porém grandes e majestosos no que diz
@@ -149,16 +144,29 @@
           humana, pois sei que cada um pode transformar o outro com um simples
           toque de generosidade.
         </p>
-        <div class="quem-sou_img">
-          <span class="material-icons icons arrow-prev"> navigate_before </span>
-          <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" />
-          <span class="material-icons icons arrow-next"> navigate_next </span>
+
+        <div class="splide quem-sou-img">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" />
+              </li>
+
+              <li class="splide__slide">
+                <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" />
+              </li>
+
+              <li class="splide__slide">
+                <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <!-- fim da quem sou -->
+    <!-- fecha quem sou -->
 
-    <!-- quote inicio -->
+    <!-- abre quote -->
     <article class="quote-bg">
       <div class="quote container">
         <blockquote>
@@ -168,9 +176,9 @@
         <cite>𝘋𝘳𝘶𝘮𝘮𝘰𝘯𝘥 </cite>
       </div>
     </article>
-    <!-- quote fim -->
+    <!-- fecha quote -->
 
-    <!-- depoimentos -->
+    <!-- abre depoimentos -->
     <div class="splide depoimentos">
       <h3>Depoimentos</h3>
       <div class="splide__track">
@@ -219,7 +227,7 @@
     </div>
     <!-- fecha depoimentos -->
 
-    <!-- apresentacao -->
+    <!-- abre apresentacao -->
     <section class="apresentacao">
       <div class="apresentacao-img"></div>
       <div class="apresentacao-conteudo">
@@ -246,16 +254,15 @@
       </div>
       <div class="apresentacao-passaro"></div>
     </section>
+    <!-- fecha -->
 
-    <section class="servicos" id="servicos">
-      <h3 class="titulo full-bleed">Serviços</h3>
-      <div class="servicos-img">
-        <span class="material-icons icons arrow-bfr"> navigate_before </span>
-        <span class="material-icons icons arrow-nxt"> navigate_next </span>
-      </div>
-      <ul>
-        <li>
-          <div class="servico">
+    <!-- abre servicos -->
+    <section class="servicos splide" id="servicos">
+      <h3 class="titulo">Serviços</h3>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="img/servicos-1.svg" alt="Orientação Profissional" />
             <h3>Orientação Profissional</h3>
             <p>
               O projeto é voltado para adolescentes, ou adultos em transição de
@@ -267,9 +274,9 @@
               Carreira estável e com êxito, mesmo sendo seres humanos que
               estamos em constante evolução e movimento.
             </p>
-          </div>
-
-          <div class="servico">
+          </li>
+          <li class="splide__slide">
+            <img src="img/servicos-2.svg" alt="Plantão Psicológico" />
             <h3>Plantão Psicológico</h3>
             <p>
               Não há urgência psicológica, porém há momentos que podemos sentir
@@ -280,9 +287,9 @@
               Para aderir a este serviço, basta clicar no botão abaixo e agendar
               o seu atendimento.
             </p>
-          </div>
-
-          <div class="servico">
+          </li>
+          <li class="splide__slide">
+            <img src="img/servicos-3.svg" alt="Consultoria empresarial" />
             <h3>Consultoria empresarial</h3>
             <p>
               -Elaboração e Implantação de projetos -Treinamento de para
@@ -290,51 +297,57 @@
               Orientação e treinamento para funcionários - Elaboração de
               palestra personalizada conforme a necessidade da empresa.
             </p>
-          </div>
-
-          <div class="servico">
+          </li>
+          <li class="splide__slide">
+            <img src="img/servicos-4.svg" alt="Webnário" />
             <h3>Webnário</h3>
             <p>
               São cursos ou vídeo aulas com uma temática especifica com o
               objetivo educacional, onde o palestrante passa seu conhecimento e
               o aluno pode absorver na comodidade do seu lar.
             </p>
-          </div>
-
-          <div class="servico">
+          </li>
+          <li class="splide__slide">
+            <img
+              src="img/servicos-5.svg"
+              alt="Terapia fora das quatro paredes"
+            />
             <h3>Terapia fora das quatro paredes</h3>
             <p>
               Este é um projeto focado para superar os medos específicos como;
               de dirigir, sair de casa, avião, elevador entre outros.
             </p>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
       <button class="btn">Agende sua consulta</button>
     </section>
+    <!-- fecha servicos -->
 
-    <section class="investimento-bg">
-      <div class="investimento container">
-        <div class="col-1">
-          <h3>Cantinho</h3>
-          <p>do investimento profissional</p>
-        </div>
-        <div class="col-2">
-          <h3>Kit de documentos para clínica</h3>
-          <p>
-            Inicie a prática clínica com estrutura e organização que irá te
-            trazer mais confiança para a elaboração de documentos psicológicos.
-            Este kit foi pensando para os profissionais que estão iniciando a
-            prática clínica, o objetivo é otimizar o tempo e segurança para a
-            parte burocrática que encontramos diariamente na clínica. Os
-            documentos seguem todas as Resoluções do Conselho Federal de
-            Psicologia e podem ser editados conforme a necessidade.
-          </p>
-          <button class="btn">Ver Documentos</button>
-        </div>
+    <!-- abre investimento -->
+    <div class="investimento">
+      <img src="img/passaro-2.png" alt="Beija flor verde" class="passaro-2" />
+      <div class="col-1">
+        <h3>Cantinho</h3>
+        <p>do Crescimento Pessoal</p>
       </div>
-    </section>
+      <div class="col-2">
+        <h3>Kit de documentos para clínica</h3>
+        <p>
+          Inicie a prática clínica com estrutura e organização que irá te trazer
+          mais confiança para a elaboração de documentos psicológicos. Este kit
+          foi pensando para os profissionais que estão iniciando a prática
+          clínica, o objetivo é otimizar o tempo e segurança para a parte
+          burocrática que encontramos diariamente na clínica. Os documentos
+          seguem todas as Resoluções do Conselho Federal de Psicologia e podem
+          ser editados conforme a necessidade.
+        </p>
+        <button class="btn">Ver Documentos</button>
+      </div>
+    </div>
+    <!-- fecha investimento -->
 
+    <!-- scripts js -->
     <script src="js/splide-2.4.21/splide.min.js"></script>
     <script src="js/script.js"></script>
   </body>
