@@ -19,10 +19,10 @@
 .header.sticky {
   min-height: 10vh;
 }
-.logo {
-  max-width: 10rem;
+.logo img {
   padding-bottom: var(--gap);
   transition: 0.3s ease-in-out;
+  max-width: 10rem;
 }
 .menu {
   position: relative;
@@ -58,8 +58,9 @@
 }
 
 /* --------------- quebra ---------------*/
-.quebra {
+.quebra img {
   margin-top: calc(var(--gap) * 2);
+  max-width: 100%;
 }
 /* --------------- quem sou ---------------*/
 
@@ -69,7 +70,7 @@
   margin-bottom: calc(var(--gap) * 10);
   column-gap: calc(var(--gap) * 10);
   position: relative;
-  top: -8px;
+  top: -16px;
 }
 .quem-sou h3 {
   margin-bottom: calc(var(--gap) * 4);
@@ -88,6 +89,7 @@
   margin: 0 auto;
   border-radius: 5px;
   padding: 0 calc(var(--gap) * 4);
+  max-width: 80%;
 }
 
 /* --------------- quote ---------------*/
@@ -237,6 +239,47 @@
   top: -120px;
 }
 
+/* -------------- contato -------------- */
+.contato {
+  min-height: 90vh;
+}
+/* -------------- footer -------------- */
+footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.3fr;
+  grid-auto-flow: column;
+
+  background-color: var(--verdeNoventa);
+  color: white;
+  min-height: 30vh;
+  padding: calc(var(--gap) * 4) var(--minWidthP);
+}
+footer h3:first-child {
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--fontP);
+  text-align: left;
+  margin-bottom: calc(var(--gap) * 2);
+  --fluid-type-max: 1.4rem;
+}
+footer a {
+  color: white;
+}
+footer li,
+.atendimento,
+.atendimento div {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap) * 2);
+}
+footer img:last-child {
+  grid-row: 3;
+  justify-self: flex-end;
+}
+.icon {
+  max-width: 25px;
+}
 /* -------------- media and screen -------------- */
 @media (max-width: 960px) {
   .header,

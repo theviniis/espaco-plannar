@@ -65,8 +65,6 @@ a:hover {
 }
 img {
   display: block;
-  max-width: 100%;
-  /* image-rendering: pixelated; */
 }
 
 /* Typography */
@@ -86,7 +84,8 @@ h3,
 p,
 a,
 blockquote,
-cite {
+cite,
+li {
   font-size: clamp(
     var(--fluid-type-min, 1rem),
     calc(1rem + var(--fluid-type-target, 3vw)),
@@ -97,25 +96,23 @@ h1 {
   --fluid-type-min: 2.5rem;
   --fluid-type-max: 5rem;
   --fluid-type-target: 5vw;
-
-  /* max-width: 15ch; */
 }
 h2 {
   --fluid-type-min: 1.8rem;
   --fluid-type-max: 3rem;
 }
 h3 {
-  --fluid-type-min: 1.5rem;
+  --fluid-type-min: 1.3rem;
   --fluid-type-max: 2.7rem;
 }
-h2,
-h3 {
-  /* max-width: 30ch; */
+a,
+li {
+  --fluid-type-min: 1rem;
+  --fluid-type-max: 1.25rem;
 }
 p {
   --fluid-type-min: 1rem;
   --fluid-type-max: 1.25rem;
-  /* max-width: 60ch; */
 }
 blockquote {
   --fluid-type-min: 1rem;
@@ -128,6 +125,9 @@ cite {
 }
 
 /* Other stuff */
+.full-bleed {
+  grid-column: 1 / -1;
+}
 .container {
   max-width: var(--minWidth);
   margin: 0 auto;
