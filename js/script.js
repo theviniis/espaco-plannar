@@ -9,25 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } ).mount();
 
-  // Banner Vibrant
-  const img = document.querySelector(".banner img");
-  // const texto =  document.querySelectorAll(".banner h3");
-  // console.log(texto);
-
-  img.addEventListener('load',function () {
-    var vibrant = new Vibrant(img);
-    var swatches = vibrant.swatches()
-
-    for (var swatch in swatches)
-      if (swatches.hasOwnProperty(swatch) && swatches[swatch])
-
-      console.log(swatch, swatches[swatch].getHex())
-  });
- 
-   
-
-
-
 // Splide Quem Sou
   new Splide( '.quem-sou-img', {
     pagination: false,
@@ -51,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
     type: 'slide',
     classes: {
       arrows: 'splide__arrows custom-arrows',
+    },
+    breakpoints: {
+      600: { 
+      perPage: 1,
+      }
     }
   } ).mount();
   
@@ -67,6 +53,25 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     classes: {
       arrows: 'splide__arrows custom-arrows',
+    },
+    breakpoints: {
+      1600: {
+        perPage: 3,
+        padding: {
+          left: '20ch',
+          right: '20ch'
+        }
+      },
+      900: {
+        perPage: 1,
+      },
+      600: {
+        perPage: 1,
+        padding: {
+          left: '0',
+          right: '0'
+        }
+      }
     }
   } ).mount();
 

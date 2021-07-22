@@ -21,12 +21,6 @@
   --gap: 8px;
 }
 
-@media (max-width: 550px) {
-  :root {
-    --minWidth: 90vw;
-  }
-}
-
 /* Reset */
 * {
   box-sizing: border-box;
@@ -98,19 +92,13 @@ h1 {
   --fluid-type-max: 5rem;
   --fluid-type-target: 5vw;
 }
-h2 {
-  --fluid-type-min: 1.8rem;
-  --fluid-type-max: 3rem;
-}
 h3 {
   --fluid-type-min: 1.3rem;
   --fluid-type-max: 2.7rem;
 }
+
 a,
-li {
-  --fluid-type-min: 1rem;
-  --fluid-type-max: 1.25rem;
-}
+li,
 p {
   --fluid-type-min: 1rem;
   --fluid-type-max: 1.25rem;
@@ -132,11 +120,6 @@ cite {
 .container {
   max-width: var(--minWidth);
   margin: 0 auto;
-}
-.icons {
-  font-size: 45px;
-  color: var(--verdeNoventa);
-  cursor: pointer;
 }
 .btn {
   border-radius: 30px;
