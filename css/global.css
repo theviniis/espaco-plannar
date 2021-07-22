@@ -85,7 +85,8 @@ p,
 a,
 blockquote,
 cite,
-li {
+li,
+input {
   font-size: clamp(
     var(--fluid-type-min, 1rem),
     calc(1rem + var(--fluid-type-target, 3vw)),
