@@ -39,22 +39,8 @@
 }
 
 /* --------------- banner ---------------*/
-.banner_item {
-  display: grid;
-  grid-auto-rows: min-content;
-  grid-template-columns: repeat(2, 1fr);
-  gap: calc(var(--gap) * 2);
-  place-content: center;
-  padding: 0 calc((100vw - var(--minWidth)) / 2 + 5vw);
-  width: auto;
-}
-.banner_item > * {
-  grid-column: 1;
-}
-.banner h3 {
-  color: var(--verdeNoventa);
-  --fluid-type-max: 2rem;
-  font-family: var(--fontFamP);
+.banner {
+  min-height: 80vh;
 }
 
 /* --------------- quebra ---------------*/
@@ -69,8 +55,6 @@
   grid-template-columns: repeat(2, minmax(350px, 1fr));
   margin-bottom: calc(var(--gap) * 10);
   column-gap: calc(var(--gap) * 10);
-  position: relative;
-  top: -16px;
 }
 .quem-sou h3 {
   margin-bottom: calc(var(--gap) * 4);
@@ -241,57 +225,64 @@
 
 /* -------------- contato -------------- */
 .contato {
-  /* padding: calc(var(--gap) * 4) var(--minWidthP); */
   display: grid;
   grid-template-columns: 1fr minmax(300px, 1fr);
   grid-template-rows: min-content;
   min-height: 90vh;
   position: relative;
-}
-
-.contato-form {
-  background-image: url(img/ctt-form-1.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 284px;
-  max-width: 571px;
-
-  display: flex;
-  flex-direction: column;
-  /* gap: calc(var(--gap) * 10); */
-}
-.contato-form input {
-  flex-grow: 0;
-  position: relative;
-  top: 25%;
-  background-color: transparent;
-  color: var(--fontColCinza);
-  height: 5ch;
-  width: 90%;
-  margin: 0 auto;
-  border: ;
-  border-radius: 50px;
-}
-.contato-form input + input {
-  margin-top: 8ch;
-}
-.mensagem {
-  grid-row: 2;
-  height: auto;
+  margin: calc(var(--gap) * 4) 0;
 }
 .contato img {
   grid-column: 1/-1;
   max-width: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.contato input {
+  background-color: transparent;
+  border: none;
+  border-radius: 15px;
+  color: var(--fontColCinza);
+  flex-grow: 0;
+}
+.endereco {
+  place-self: center;
+  color: var(--fontColCinza);
+  max-width: 12vw;
+}
+.endereco span {
+  font-weight: bold;
+}
+.contato-form {
+  position: relative;
+  right: -13%;
+  height: 284px;
+  max-width: 571px;
+  display: flex;
+  flex-direction: column;
+}
+.contato-form input {
+  height: 5ch;
+  top: 25%;
+  left: 5%;
+  position: absolute;
+  width: 90%;
+}
+.contato-form input + input {
+  margin-top: 13ch;
+}
+.contato .full-bleed {
+  position: relative;
 }
 #mensagem {
   position: absolute;
-  right: 10%;
-  top: 25%;
+  top: 8%;
+  right: 14.3%;
+  width: 530px;
+  height: 230px;
 }
 .contato img:last-child {
   max-width: 10rem;
-  background-repeat: no-repeat;
-  margin: 0 auto;
 }
 /* -------------- footer -------------- */
 footer {
