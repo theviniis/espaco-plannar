@@ -266,7 +266,7 @@
 }
 .contato input {
   background-color: transparent;
-  border: none;
+  border: ;
   border-radius: 15px;
   color: var(--fontColCinza);
   flex-grow: 0;
@@ -308,7 +308,7 @@ footer li,
 .atendimento div {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
   gap: calc(var(--gap) * 2);
 }
 .atendimento div {

@@ -24,7 +24,9 @@
 @media (max-width: 900px) {
   .header,
   .banner_item,
-  .quem-sou {
+  .quem-sou,
+  .contato,
+  footer {
     grid-template-columns: minmax(300px, 1fr);
   }
   .header {
