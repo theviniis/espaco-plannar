@@ -23,13 +23,23 @@
 @media (max-width: 900px) {
   .header,
   .banner_item,
-  .quem-sou,
+  .quem-sou-content,
   .contato,
   footer {
     grid-template-columns: minmax(300px, 1fr);
+    grid-template-areas:
+      "titulo"
+      "nav"
+      "social"
+      "ctt"
+      "logo";
   }
-  .quem-sou-img img {
-    max-width: 88%;
+  .contato {
+    grid-template-areas:
+      "titulo"
+      "contato"
+      "end"
+      "logo";
   }
   .depoimentos .custom-arrows {
     width: 64vw;

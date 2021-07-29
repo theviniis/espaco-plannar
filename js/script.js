@@ -9,22 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } ).mount();
 
-// Splide Quem Sou
-  new Splide( '.quem-sou-img', {
-    pagination: false,
-    padding: {
-      left: '16px'
-    },
-    classes: {
-      arrows: 'splide__arrows custom-arrows',
-    }
-  } ).mount();
-
 // Splide Depoimentos
  new Splide( '.depoimentos', {
     easing: 'ease-in-out',
     focus: 'center',
-    gap: '15ch',
     pagination: false,
 	  perPage  : 2,
     start: 1,
