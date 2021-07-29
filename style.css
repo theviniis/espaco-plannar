@@ -29,7 +29,7 @@
 .menu {
   position: relative;
   display: flex;
-  gap: calc(var(--gap) * 5);
+  gap: calc(var(--gap) * 4);
   letter-spacing: 2px;
   justify-content: flex-end;
   text-transform: lowercase;
@@ -87,8 +87,6 @@
   border-radius: 5px;
   max-width: 100%;
 }
-/* --------------- svg animate ---------------*/
-
 /* --------------- quote ---------------*/
 .quote {
   display: flex;
@@ -108,7 +106,6 @@
 /* --------------- depoimentos ---------------*/
 .depoimentos {
   padding: calc(var(--gap) * 4) 0;
-  min-height: 30vh;
   background-color: var(--colCinza);
 }
 .depoimentos h3 {
@@ -337,7 +334,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: min-content;
-  row-gap: 2ch;
+  gap: 2ch;
   grid-template-areas:
     "titulo ... ..."
     "nav social ctt"

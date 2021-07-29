@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
  new Splide( '.depoimentos', {
     easing: 'ease-in-out',
     focus: 'center',
+    gap: '4rem',
     pagination: false,
 	  perPage  : 2,
     start: 1,
@@ -49,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
           left: '20ch',
           right: '20ch'
         }
+      },
+      1200: {
+        perPage: 2,
       },
       900: {
         perPage: 1,

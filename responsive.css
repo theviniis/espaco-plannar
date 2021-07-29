@@ -8,41 +8,44 @@
   .ctt-path {
     display: none;
   }
-}
-@media only screen and (max-width: 1020px) {
   .header {
     justify-content: center;
   }
-}
-@media only screen and (max-width: 776px) {
-  .menu {
-    gap: calc(var(--gap) * 2);
+  .quem-sou-content {
+    grid-template-columns: minmax(300px, 1fr);
+  }
+  .depoimentos .custom-arrows {
+    width: 58vw;
+  }
+  .investimento {
+    grid-template-columns: 0.6fr 1.4fr 0.1fr;
+  }
+  .endereco {
+    max-width: 20vw;
   }
 }
-
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .header,
   .banner_item,
-  .quem-sou-content,
-  .contato,
   footer {
     grid-template-columns: minmax(300px, 1fr);
+  }
+  .quote blockquote {
+    max-width: var(--minWidth);
+  }
+  .depoimentos .custom-arrows {
+    width: 60vw;
+  }
+  .investimento {
+    grid-template-columns: 0.3fr 1.7fr;
+  }
+  footer {
     grid-template-areas:
       "titulo"
       "nav"
       "social"
       "ctt"
       "logo";
-  }
-  .contato {
-    grid-template-areas:
-      "titulo"
-      "contato"
-      "end"
-      "logo";
-  }
-  .depoimentos .custom-arrows {
-    width: 64vw;
   }
   .apresentacao {
     grid-template-columns: repeat(8, 1fr) 0.8fr;
@@ -57,9 +60,6 @@
   .apresentacao-passaro {
     grid-column: 1/5;
   }
-  .investimento {
-    grid-template-columns: 0.6fr 1.4fr 0.3fr;
-  }
   .passaro-2 {
     top: -54px;
   }
@@ -70,7 +70,7 @@
 
 @media (max-width: 600px) {
   :root {
-    --minWidth: 90vw;
+    --minWidth: 80vw;
   }
   .menu {
     gap: calc(var(--gap) * 1);
@@ -99,12 +99,15 @@
     max-width: 100%;
     margin: 0 auto calc(var(--gap) * 4) auto;
   }
+  .contato {
+    grid-template-areas:
+      "titulo"
+      "contato"
+      "end"
+      "logo";
+  }
   .servicos p {
     max-width: calc(var(--minWidth) - 15vw);
     margin: 0 auto;
-  }
-  .contato form {
-    top: 2%;
-    gap: calc(var(--gap) * 1.7);
   }
 }

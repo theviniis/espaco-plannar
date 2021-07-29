@@ -10,7 +10,7 @@
 }
 
 .splide__arrow--next {
-  right: 0 !important;
+  /* right: 0 !important; */
 }
 /* --------------- splide depoimentos ---------------*/
 .depoimentos .custom-arrows {
@@ -18,7 +18,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 55vw;
+  width: 45vw;
   z-index: 2;
 }
 .depoimentos .splide__slide:not(.is-active) {
