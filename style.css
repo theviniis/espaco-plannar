@@ -88,29 +88,6 @@
   max-width: 100%;
 }
 /* --------------- svg animate ---------------*/
-svg .svg-elem-1 {
-  stroke-dashoffset: 4268px;
-  stroke-dasharray: 4268px;
-  -webkit-transition: stroke-dashoffset 4s cubic-bezier(0.47, 0, 0.745, 0.715)
-    0s;
-  transition: stroke-dashoffset 4s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-}
-
-svg.active .svg-elem-1 {
-  stroke-dashoffset: 0;
-}
-
-svg .svg-elem-2 {
-  stroke-dashoffset: 5234.98583984375px;
-  stroke-dasharray: 5234.98583984375px;
-  -webkit-transition: stroke-dashoffset 4s cubic-bezier(0.47, 0, 0.745, 0.715)
-    0.12s;
-  transition: stroke-dashoffset 4s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
-}
-
-svg.active .svg-elem-2 {
-  stroke-dashoffset: 0;
-}
 
 /* --------------- quote ---------------*/
 .quote {
