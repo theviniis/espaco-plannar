@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
  
-    let logo = document.querySelector(".logo img");
+    let logo = document.querySelector(".logo");
     if(window.scrollY > 0) {
       logo.src = "./img/logo.svg";
     } else {
