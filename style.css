@@ -35,6 +35,9 @@
   text-transform: lowercase;
   transition: 0.3s ease-in-out;
 }
+.menu li {
+  width: max-content;
+}
 .menu li a {
   padding: var(--gap);
   --fluid-type-max: 1.8rem;
@@ -221,7 +224,6 @@
   color: var(--fontColCinza);
   background-color: white;
   place-self: flex-start;
-  margin-top: calc(var(--gap) * 2);
 }
 .investimento .col-2 {
   display: flex;
