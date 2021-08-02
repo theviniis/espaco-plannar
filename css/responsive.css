@@ -51,9 +51,6 @@
   .investimento {
     grid-template-columns: 0.6fr 1.4fr 0.1fr;
   }
-  .contato {
-    min-height: initial;
-  }
   .contato .endereco {
     max-width: 25vw;
   }
@@ -99,16 +96,24 @@
 }
 @media only screen and (max-width: 720px) {
   footer {
-    grid-template-columns: minmax(300px, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "titulo"
-      "nav"
-      "ctt"
-      "social"
-      "logo";
+      "titulo ..."
+      "nav social"
+      "ctt ctt"
+      "... logo";
   }
 }
 @media only screen and (max-width: 600px) {
+  a,
+  li,
+  p,
+  blockquote,
+  cite,
+  .apresentacao p,
+  .quem-sou p {
+    --fluid-type-max: 1rem;
+  }
   .header nav {
     align-items: center;
   }
@@ -148,6 +153,17 @@
   .apresentacao-passaro {
     display: none;
   }
+  .investimento {
+    grid-template-columns: minmax(300px, 1fr);
+    grid-template-areas:
+      "titulo"
+      "subtitulo"
+      "conteudo";
+  }
+  .investimento h3:nth-child(3) {
+    --fluid-type-max: 1.1rem;
+    font-weight: 400;
+  }
   .servicos p {
     max-width: calc(var(--minWidth) - 15vw);
     margin: 0 auto;
@@ -171,10 +187,3 @@
 }
 @media only screen and (max-width: 360px) {
 }
-/* .contato {
-    grid-template-areas:
-      "titulo"
-      "contato"
-      "end"
-      "logo";
-  } */

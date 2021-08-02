@@ -101,21 +101,17 @@ h3 {
   --fluid-type-min: 1.3rem;
   --fluid-type-max: 2.7rem;
 }
-
 a,
 li,
 p {
-  --fluid-type-min: 1rem;
   --fluid-type-max: 1.25rem;
 }
-blockquote {
-  --fluid-type-min: 1rem;
+blockquote,
+cite {
   --fluid-type-max: 1.8rem;
 }
 cite {
   font-style: normal;
-  --fluid-type-min: 0.8rem;
-  --fluid-type-max: 1.7rem;
 }
 
 /* Other stuff */
