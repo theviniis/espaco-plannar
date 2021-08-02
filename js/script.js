@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Splide Banner
   new Splide( '.banner', {
     pagination: false,
-    cover: true,
-    height: '85vh',
+    Height: true,
     classes: {
       arrows: 'splide__arrows custom-arrows',
     }
@@ -14,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     easing: 'ease-in-out',
     focus: 'center',
     gap: '4rem',
+    updateOnMove: true,
     pagination: false,
 	  perPage  : 2,
     start: 1,
@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage: 3,
     gap: '10ch',
     pagination: false,
+    updateOnMove: true,
+    // type: 'loop',
     padding: {
       left: '30ch',
       right: '30ch'
@@ -69,16 +71,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Header Sticky
   window.addEventListener("scroll", function(){
-    let header = document.querySelector("header");
+    const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
  
-    let logo = document.querySelector(".logo");
+    const logo = document.querySelector(".logo");
     if(window.scrollY > 0) {
       logo.src = "./img/logo.svg";
     } else {
       logo.src = "./img/logo-timbrado.svg";
     }
   });
+
+  // Mobile Menu
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const menu = document.querySelector(".menu");
+    
+  mobileMenu.addEventListener("click", function(){
+    menu.classList.toggle("active");
+  });
+
+  // Simple Anime
+  AOS.init();
 
 } );
 

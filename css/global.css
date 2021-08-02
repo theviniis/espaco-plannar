@@ -19,6 +19,7 @@
 
   /* Styles */
   --gap: 8px;
+  --padding: calc(var(--gap) * 6);
 }
 @font-face {
   font-family: Regalhisa;
@@ -47,6 +48,7 @@ body {
   color: var(--fontColCinza);
   line-height: 1.5;
   font-family: var(--fontFamP);
+  overflow-x: hidden;
 }
 li {
   list-style: none;
@@ -71,7 +73,7 @@ h3 {
   color: var(--verdeNoventa);
   font-family: var(--fontFamT);
   line-height: 1.1;
-  font-weight: 400;
+  font-weight: bold;
   margin: 0 auto;
   text-align: center;
 }
