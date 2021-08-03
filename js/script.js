@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+// Simple Anime
+AOS.init();
+
 // Splide Banner
   new Splide( '.banner', {
     pagination: false,
@@ -37,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     gap: '10ch',
     pagination: false,
     updateOnMove: true,
-    // type: 'loop',
     padding: {
       left: '30ch',
       right: '30ch'
@@ -60,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         perPage: 1,
       },
       600: {
+        type: 'loop',
         perPage: 1,
         padding: {
           left: '0',
@@ -73,25 +76,26 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener("scroll", function(){
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
- 
-    const logo = document.querySelector(".logo");
-    if(window.scrollY > 0) {
-      logo.src = "./img/logo.svg";
-    } else {
-      logo.src = "./img/logo-timbrado.svg";
-    }
   });
 
   // Mobile Menu
   const mobileMenu = document.querySelector(".mobile-menu");
-  const menu = document.querySelector(".menu");
-    
+  const menu = document.querySelector(".menu");  
   mobileMenu.addEventListener("click", function(){
-    menu.classList.toggle("active");
+    menu.classList.toggle("is-active");
+    mobileMenu.classList.toggle("is-active");
   });
 
-  // Simple Anime
-  AOS.init();
+  // Modal
+  const modal = document.querySelector(".modal");
+  const modalBtn = document.querySelector(".investimento button");
+  const modalClose = document.querySelector(".modal span")
+  modalBtn.addEventListener("click", function(){
+    modal.classList.add("is-active");
+  });
+  modalClose.addEventListener("click", function(){
+    modal.classList.remove("is-active");
+  });
 
 } );
 

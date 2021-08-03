@@ -34,8 +34,8 @@
   z-index: 2;
 }
 .servicos .splide__slide:not(.is-active) {
-  opacity: 0.4;
-  transform: scale(0.96);
+  /* opacity: 0.4; */
+  /* transform: scale(0.96); */
 }
 /* splide */
 .custom-arrows .splide__arrow {

@@ -85,7 +85,8 @@ a,
 blockquote,
 cite,
 li,
-input {
+input,
+textarea {
   font-size: clamp(
     var(--fluid-type-min, 1rem),
     calc(1rem + var(--fluid-type-target, 3vw)),
@@ -103,7 +104,8 @@ h3 {
 }
 a,
 li,
-p {
+p,
+textarea {
   --fluid-type-max: 1.25rem;
 }
 blockquote,

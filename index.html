@@ -21,19 +21,15 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="css/plugins/" />
     <link rel="stylesheet" href="css/plugins/splide-default.min.css" />
     <link rel="stylesheet" href="css/plugins/splide-custom.css" />
+    <link rel="stylesheet" href="css/plugins/hamburguer.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
   </head>
 
   <body>
@@ -43,7 +39,11 @@
         <a href="#"
           ><img src="img/logo-timbrado.svg" alt="Espaço Plannar" class="logo"
         /></a>
-        <span class="material-icons mobile-menu"> menu </span>
+        <button class="hamburger hamburger--collapse mobile-menu" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
         <ul class="menu">
           <li><a href="#">Início</a></li>
           <li><a href="#quem-sou">Quem sou</a></li>
@@ -76,7 +76,7 @@
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       width="100%"
-      height="180"
+      height="auto"
       viewBox="0 0 1920 180"
       class="quebra"
     >
@@ -104,63 +104,54 @@
         ></path>
       </g>
     </svg>
-
     <!-- fecha quebra -->
 
     <!-- abre quem sou -->
     <section class="quem-sou" id="quem-sou" data-aos="fade-up">
       <h3 class="titulo full-bleed">Quem sou eu</h3>
       <article class="quem-sou-content">
-        <div>
-          <p>
-            Sou filha de pais humildes, porém grandes e majestosos no que diz
-            respeito a caráter, princípios e valores, sou grata por tê-los como
-            exemplo, são minha estrutura sólida para ser quem sou hoje: Mulher,
-            esposa, mãe, irmã, tia, amiga e profissional da área da saúde.
-          </p>
-          <p>
-            Quando me lembro da minha infância, lembro dos meus pais sempre
-            dispostos a ajudar o próximo, e acredito que toda minha história de
-            vida, experiências reais e marcantes que tive no período da
-            adolescência e a minhas próprias vivências, contribuiu para a
-            escolha da minha primeira formação profissional na área da
-            enfermagem e ao mesmo tempo atuando de forma ativa em um trabalho
-            social por um longo período com dependentes químicos e pessoas em
-            situação de rua. E, ao presenciar diariamente a fragilidade e
-            vulnerabilidade que compõem o ser humano, decidi ingressar na
-            formação de psicologia. Acredito que tais situações deram sentido ao
-            que sou: generosa, empática, humana, determinada e alegre,
-            desenvolvendo em mim a importância da sensibilidade e observação dos
-            detalhes da vida de todos que estão a minha volta.
-          </p>
-          <p>
-            Sou descrita por amigos e pessoas próximas a mim como uma mulher
-            guerreira, engraçada, alegre, bagunceira - só um pouquinho - e
-            determinada e capaz de encontrar soluções de maneiras criativas!
-          </p>
-        </div>
-        <div>
-          <p>
-            Me apaixonei pelo atendimento clínico e a área social da psicologia,
-            vi que a psicologia não é assistencialista como muitos acreditam,
-            psicologia é ciência e uma ferramenta essencial no processo de
-            transformação do indivíduo e da sociedade, amo o que faço!
-          </p>
-          <p>
-            Hoje sou Especialista em Teoria Cognitiva Comportamental, pois
-            entendo a necessidade em buscar e nutrir-me de fundamentos teóricos,
-            leituras que agregam em conhecimento para me dar o suporte
-            necessário para suprir a demanda clínica, e hoje posso afirmar que
-            encontrei o meu caminho para explorar, sendo apenas uma alma humana
-            a tocar outra alma humana, pois sei que cada um pode transformar o
-            outro com um simples toque de generosidade.
-          </p>
-          <img
-            src="img/quem-sou@2x.jpg"
-            alt="Paula Rocha"
-            class="quem-sou-img"
-          />
-        </div>
+        <p>
+          Sou filha de pais humildes, porém grandes e majestosos no que diz
+          respeito a caráter, princípios e valores, sou grata por tê-los como
+          exemplo, são minha estrutura sólida para ser quem sou hoje: Mulher,
+          esposa, mãe, irmã, tia, amiga e profissional da área da saúde.
+        </p>
+        <p>
+          Quando me lembro da minha infância, lembro dos meus pais sempre
+          dispostos a ajudar o próximo, e acredito que toda minha história de
+          vida, experiências reais e marcantes que tive no período da
+          adolescência e a minhas próprias vivências, contribuiu para a escolha
+          da minha primeira formação profissional na área da enfermagem e ao
+          mesmo tempo atuando de forma ativa em um trabalho social por um longo
+          período com dependentes químicos e pessoas em situação de rua. E, ao
+          presenciar diariamente a fragilidade e vulnerabilidade que compõem o
+          ser humano, decidi ingressar na formação de psicologia. Acredito que
+          tais situações deram sentido ao que sou: generosa, empática, humana,
+          determinada e alegre, desenvolvendo em mim a importância da
+          sensibilidade e observação dos detalhes da vida de todos que estão a
+          minha volta.
+        </p>
+        <p>
+          Sou descrita por amigos e pessoas próximas a mim como uma mulher
+          guerreira, engraçada, alegre, bagunceira - só um pouquinho - e
+          determinada e capaz de encontrar soluções de maneiras criativas!
+        </p>
+        <p>
+          Me apaixonei pelo atendimento clínico e a área social da psicologia,
+          vi que a psicologia não é assistencialista como muitos acreditam,
+          psicologia é ciência e uma ferramenta essencial no processo de
+          transformação do indivíduo e da sociedade, amo o que faço!
+        </p>
+        <p>
+          Hoje sou Especialista em Teoria Cognitiva Comportamental, pois entendo
+          a necessidade em buscar e nutrir-me de fundamentos teóricos, leituras
+          que agregam em conhecimento para me dar o suporte necessário para
+          suprir a demanda clínica, e hoje posso afirmar que encontrei o meu
+          caminho para explorar, sendo apenas uma alma humana a tocar outra alma
+          humana, pois sei que cada um pode transformar o outro com um simples
+          toque de generosidade.
+        </p>
+        <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" class="quem-sou-img" />
       </article>
     </section>
     <!-- fecha quem sou -->
@@ -226,7 +217,12 @@
 
     <!-- abre apresentacao -->
     <section class="apresentacao" data-aos="fade-up">
-      <div class="apresentacao-img"></div>
+      <img
+        src="img/apresentacao-img@2x.jpg"
+        alt="flores de fundo"
+        class="apresentacao-img"
+      />
+
       <div class="apresentacao-conteudo">
         <h3>O que é essa tão famosa psicoterapia?</h3>
         <p>
@@ -249,7 +245,11 @@
           aplicativos Skype, Meet, Duo ou Whatssap.
         </p>
       </div>
-      <div class="apresentacao-passaro"></div>
+      <img
+        src="img/passaro-1.png"
+        alt="Beija Flor Verde"
+        class="apresentacao-passaro"
+      />
     </section>
     <!-- fecha -->
 
@@ -259,7 +259,11 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <img src="img/servicos-1.svg" alt="Orientação Profissional" />
+            <img
+              src="img/servicos-1.svg"
+              alt="Orientação Profissional"
+              class="livro"
+            />
             <h3>Orientação Profissional</h3>
             <p>
               O projeto é voltado para adolescentes, ou adultos em transição de
@@ -373,17 +377,18 @@
         </div>
         <div>
           <img src="img/ctt-msg.svg" alt="borda do formulário" />
-          <input
-            type="mensagem"
+          <textarea
             name="mensagem"
             id="mensagem"
             placeholder="mensagem"
             class="mensagem"
-          />
+            cols="2"
+            rows="5"
+            maxlength="500"
+          ></textarea>
           <button class="btn">enviar</button>
         </div>
       </form>
-
       <img
         src="img/ctt-path.svg"
         alt="contato-borda"
@@ -391,7 +396,7 @@
       />
       <img src="img/logo.svg" alt="Espaço Plannar" class="logo full-bleed" />
     </section>
-    <!-- fecha investimento -->
+    <!-- fecha contato -->
 
     <!-- abre footer -->
     <footer>
