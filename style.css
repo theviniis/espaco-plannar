@@ -34,13 +34,22 @@ header.sticky .logo:first-child {
   display: flex;
   gap: var(--padding);
   letter-spacing: 2px;
-  justify-content: flex-end;
+  justify-content: center;
   text-transform: lowercase;
   transition: 0.3s ease-in-out;
 }
+.menu-social {
+  display: none;
+}
+.menu.is-active .menu-social {
+  display: flex;
+  justify-content: space-between;
+}
 .menu.is-active {
   transform: translateX(0);
+  gap: 1rem;
 }
+
 .menu li {
   width: max-content;
 }
@@ -455,4 +464,6 @@ footer a {
   color: var(--verdeNoventa);
   font-size: 2rem;
   cursor: pointer;
+  display: block;
+  padding: 8px;
 }
