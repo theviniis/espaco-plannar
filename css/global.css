@@ -42,6 +42,7 @@ blockquote {
 /* Global Styles */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
 body {
   background-color: var(--bodyColor);

@@ -5,7 +5,7 @@ AOS.init();
 // Splide Banner
   new Splide( '.banner', {
     pagination: false,
-    Height: true,
+    type: 'loop',
     classes: {
       arrows: 'splide__arrows custom-arrows',
     }
@@ -40,6 +40,7 @@ AOS.init();
     gap: '10ch',
     pagination: false,
     updateOnMove: true,
+    type: 'loop',
     padding: {
       left: '30ch',
       right: '30ch'
@@ -62,7 +63,6 @@ AOS.init();
         perPage: 1,
       },
       600: {
-        type: 'loop',
         perPage: 1,
         padding: {
           left: '0',
@@ -90,12 +90,20 @@ AOS.init();
   const modal = document.querySelector(".modal");
   const modalBtn = document.querySelector(".investimento button");
   const modalClose = document.querySelector(".modal span")
-  modalBtn.addEventListener("click", function(){
-    modal.classList.add("is-active");
+
+  function toggleModal(){
+    const overflow = document.body.style.overflow === 'hidden';
+    modal.classList.toggle('is-active');
+    overflow ? document.body.style.overflow='hidden' : document.body.style.overflow='initial';
+  }
+  modalBtn.addEventListener("click", toggleModal);
+  modalClose.addEventListener("click", toggleModal);
+  window.addEventListener("keydown",function(e){
+    if (e.key === 'Escape' && modal.classList.contains('is-active')) { 
+      return toggleModal();
+    }
   });
-  modalClose.addEventListener("click", function(){
-    modal.classList.remove("is-active");
-  });
+  
 
 } );
 
