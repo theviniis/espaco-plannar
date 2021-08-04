@@ -3,10 +3,6 @@
     padding-top: 0;
   }
 }
-
-@media only screen and (max-width: 1200px) {
-}
-
 @media only screen and (max-width: 1200px) {
   :root {
     --minWidth: 85vw;
@@ -32,6 +28,10 @@
   }
   .mobile-menu {
     display: block;
+  }
+  .apresentacao {
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-areas: "img ctt";
   }
   .passaro-2 {
     max-width: 35%;
@@ -84,10 +84,7 @@
   .investimento {
     grid-template-columns: 0.3fr 1.7fr;
   }
-  .apresentacao {
-    grid-template-columns: 0.5fr 1.5fr;
-    grid-template-areas: "img ctt";
-  }
+
   .apresentacao-img {
     display: none;
   }
