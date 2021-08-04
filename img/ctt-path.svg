@@ -1,12 +1,13 @@
  <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1406 274.03"
-        class="quebra"
+        class="ctt-path"
       >
         <defs>
           <style>
             .cls-1 {
-              fill: #127e7b;          
+              fill: #127e7b;   
+              stroke: rgba(0,0,0,.5);s       
             }
             .cls-2 {
               fill: #f8f8f8;
