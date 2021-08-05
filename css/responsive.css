@@ -40,7 +40,8 @@
   .apresentacao-passaro {
     max-width: 60%;
   }
-  img[class*="passaro"] {
+  .apresentacao #container,
+  .investimento .container {
     display: none;
   }
   .ctt-path {
