@@ -3,7 +3,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 4;
-  width: 100vw;
+  width: 100%;
   min-height: 15vh;
 }
 .header nav {
@@ -268,6 +268,7 @@ img[class*="passaro"] {
   background-color: var(--verdeNoventa);
   padding: var(--padding) var(--minWidthP);
   position: relative;
+  overflow-x: hidden;
 }
 .investimento h3,
 .investimento p {
@@ -378,6 +379,7 @@ img[class*="passaro"] {
 }
 .contato .logo {
   padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 /* -------------- footer -------------- */
 footer {
@@ -442,38 +444,39 @@ footer a {
 
 /* -------------- modal -------------- */
 .modal {
-  background-color: #fff;
-  padding: var(--padding);
   position: fixed;
   top: calc(50% + 10vh);
   left: 50%;
-  transform: translate(-50%, calc(-50% - 10vh));
   border-radius: 10px;
+  background-color: #fff;
   display: none;
-  z-index: 6;
+  transform: translate(-50%, calc(-50% - 10vh));
   transition: 1s;
+  padding: var(--padding);
+  z-index: 6;
 }
 .modal.is-active {
   display: grid;
+  grid-template-areas:
+    "titulo btn"
+    "li li";
+  align-items: center;
+  gap: var(--padding);
 }
 .modal h3 {
-  margin-bottom: var(--padding);
+  grid-area: titulo;
 }
 .modal ul {
+  grid-area: li;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: var(--padding);
 }
-.modal li {
-  width: max-content;
-}
 .modal .material-icons {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  transform: translate(-5%, -5%);
+  grid-area: btn;
+  justify-self: end;
   color: var(--verdeNoventa);
-  font-size: 2rem;
+  font-size: 2.2rem;
   cursor: pointer;
   display: block;
   padding: 8px;

@@ -14,25 +14,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: flex-end;
     position: absolute;
     top: 0;
     right: 0;
     background: var(--verdeNoventa);
     height: 100vh;
     width: 100vw;
-    padding: var(--padding);
     transform: translateX(100%);
     z-index: 4;
   }
-  .menu li {
-    padding: 8px;
+  .menu.is-active {
+    padding-top: 10vh;
   }
   .menu.is-active a {
+    padding: 8px;
     color: white;
   }
   .menu-social {
     display: flex;
     place-content: center;
+    gap: 1.5rem;
   }
   #hamburger-icon {
     display: block;
@@ -55,9 +57,6 @@
   .servicos .custom-arrows {
     width: var(--minWidth);
   }
-  .investimento .btn {
-    place-self: center;
-  }
   .ctt-path {
     display: none;
   }
@@ -74,7 +73,7 @@
     max-width: 25vw;
   }
   .contato .logo {
-    padding-top: 0;
+    display: none;
   }
   .modal {
     min-height: 100%;
@@ -201,12 +200,12 @@
       "contato"
       "end"
       "logo";
-    gap: 2rem;
+    gap: var(--padding);
     max-width: var(--minWidth);
     margin: 0 auto;
   }
   .contato .endereco {
-    max-width: 80%;
+    max-width: 64%;
     padding: 0;
   }
   .modal li {
