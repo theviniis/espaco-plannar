@@ -80,7 +80,7 @@ AOS.init();
   });
 
   // Mobile Menu
-  const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileMenu = document.getElementById('hamburger-icon');
   const menu = document.querySelector(".menu");  
   mobileMenu.addEventListener("click", function(){
     menu.classList.toggle("is-active");

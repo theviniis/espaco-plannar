@@ -7,7 +7,11 @@
   :root {
     --minWidth: 85vw;
   }
+  .header {
+    justify-content: center;
+  }
   .menu {
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
@@ -26,7 +30,11 @@
   .menu.is-active a {
     color: white;
   }
-  .mobile-menu {
+  .menu-social {
+    display: flex;
+    place-content: center;
+  }
+  #hamburger-icon {
     display: block;
   }
   .apresentacao {
@@ -44,14 +52,20 @@
   .investimento .container {
     display: none;
   }
+  .servicos .custom-arrows {
+    width: var(--minWidth);
+  }
+  .investimento .btn {
+    place-self: center;
+  }
   .ctt-path {
     display: none;
   }
-  .header {
-    justify-content: center;
-  }
   .depoimentos .custom-arrows {
     width: 58vw;
+  }
+  .header {
+    justify-content: center;
   }
   .investimento {
     grid-template-columns: 0.6fr 1.4fr 0.1fr;
@@ -94,9 +108,6 @@
   }
   .apresentacao-img {
     display: none;
-  }
-  .servicos .custom-arrows {
-    width: 50%;
   }
   .contato .endereco {
     max-width: 20vw;

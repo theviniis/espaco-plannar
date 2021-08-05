@@ -2,8 +2,9 @@
 header {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 4;
+  width: 100vw;
+  min-height: 15vh;
 }
 .header nav {
   display: flex;
@@ -12,12 +13,11 @@ header {
   flex-wrap: wrap;
   gap: calc(var(--gap) * 2);
   background-color: var(--bodyColor);
-  min-height: 10vh;
   transition: 0.3s ease-in-out;
   padding: calc(var(--gap) * 2) calc((100vw - var(--minWidth)) / 2);
 }
 header.sticky {
-  min-height: 2vh;
+  min-height: 10vh;
 }
 header.sticky .logo:first-child {
   max-width: 8rem;
@@ -29,6 +29,13 @@ header.sticky .logo:first-child {
   transition: 0.3s ease-in-out;
   max-width: 10rem;
 }
+#hamburger-icon {
+  display: none;
+  z-index: 5;
+  color: var(--verdeNoventa);
+  font-size: 2.5rem;
+  margin: 8px 0;
+}
 .menu {
   position: relative;
   display: flex;
@@ -38,18 +45,6 @@ header.sticky .logo:first-child {
   text-transform: lowercase;
   transition: 0.3s ease-in-out;
 }
-.menu-social {
-  display: none;
-}
-.menu.is-active .menu-social {
-  display: flex;
-  justify-content: space-between;
-}
-.menu.is-active {
-  transform: translateX(0);
-  gap: 1rem;
-}
-
 .menu li {
   width: max-content;
 }
@@ -57,17 +52,19 @@ header.sticky .logo:first-child {
   padding: var(--gap);
   --fluid-type-max: 1.8rem;
 }
-.mobile-menu {
-  cursor: pointer;
+.menu.is-active {
+  gap: 1rem;
+  transform: translateX(0);
+  padding: var(--minWidthP);
+}
+.menu-social {
   display: none;
-  z-index: 5;
+  width: var(--minWidth);
 }
-.mobile-menu {
-  color: var(--verdeNoventa);
-  font-size: 2.5rem;
-  margin: 8px 0;
+.menu-social img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
-
 /* --------------- banner ---------------*/
 .banner {
   margin-top: 15vh;
@@ -247,6 +244,7 @@ img[class*="passaro"] {
 }
 .servicos li h3 {
   --fluid-type-max: 2.1rem;
+  max-width: calc(var(--minWidth) - 15vw);
 }
 .servicos li p {
   overflow-y: auto;
@@ -261,7 +259,7 @@ img[class*="passaro"] {
   display: grid;
   grid-template-columns: 0.6fr 1.4fr minmax(100px, 0.5fr);
   grid-auto-rows: min-content;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-items: flex-start;
   grid-template-areas:
