@@ -18,8 +18,8 @@
   --colCinza: #ececec;
 
   /* Styles */
-  --gap: 1ch;
-  --padding: calc(var(--gap) * 6);
+  --gap: 8px;
+  --padding: calc(var(--gap) * 5);
 }
 @font-face {
   font-family: Regalhisa;
