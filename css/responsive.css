@@ -30,11 +30,18 @@
     display: block;
   }
   .apresentacao {
-    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-columns: 1fr;
     grid-template-areas: "img ctt";
   }
-  .passaro-2 {
-    max-width: 35%;
+  .apresentacao #container {
+    top: 18%;
+    left: -17%;
+  }
+  .apresentacao-passaro {
+    max-width: 60%;
+  }
+  img[class*="passaro"] {
+    display: none;
   }
   .ctt-path {
     display: none;
@@ -84,15 +91,11 @@
   .investimento {
     grid-template-columns: 0.3fr 1.7fr;
   }
-
   .apresentacao-img {
     display: none;
   }
-  .apresentacao-passaro {
-    grid-column: 1/-1;
-    top: 16%;
-    left: 1%;
-    max-width: 36%;
+  .servicos .custom-arrows {
+    width: 50%;
   }
   .contato .endereco {
     max-width: 20vw;
@@ -118,9 +121,16 @@
   blockquote,
   cite,
   textarea,
+  button,
   .apresentacao p,
   .quem-sou p {
     --fluid-type-max: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  .servicos li h3 {
+    --fluid-type-max: 1.5rem;
   }
   .header nav {
     align-items: center;
@@ -140,8 +150,11 @@
     width: var(--minWidth);
   }
   .apresentacao {
-    grid-template-columns: 0.3fr 1fr;
+    grid-template-columns: 1fr;
     width: var(--minWidth);
+  }
+  .apresentacao,
+  .apresentacao p {
     margin: 0 auto;
   }
   .apresentacao-img {
@@ -153,11 +166,6 @@
   .apresentacao-conteudo h3 {
     max-width: 100%;
     margin: 0 auto calc(var(--gap) * 4) auto;
-  }
-  .apresentacao-passaro {
-    top: 10%;
-    left: -7%;
-    max-width: 37%;
   }
   .investimento {
     grid-template-columns: minmax(300px, 1fr);
@@ -173,9 +181,6 @@
   .servicos p {
     max-width: calc(var(--minWidth) - 15vw);
     margin: 0 auto;
-  }
-  .servicos .custom-arrows {
-    width: calc(var(--minWidth));
   }
   .contato {
     grid-template-columns: 1fr;
@@ -195,6 +200,4 @@
   .modal li {
     width: unset;
   }
-}
-@media only screen and (max-width: 360px) {
 }

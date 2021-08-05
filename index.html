@@ -238,7 +238,7 @@
     <!-- fecha depoimentos -->
 
     <!-- abre apresentacao -->
-    <section class="apresentacao" data-aos="fade-up">
+    <section class="apresentacao" id="apresentacao" data-relative-input="true">
       <img
         src="img/apresentacao-img@2x.jpg"
         alt="flores de fundo"
@@ -271,12 +271,17 @@
           aplicativos Skype, Meet, Duo ou Whatssap.
         </p>
       </div>
-      <img
-        src="img/passaro-1.png"
-        alt="Beija Flor Verde"
-        class="apresentacao-passaro"
-        id="apresentacao-passaro"
-      />
+      <div id="container" class="container">
+        <div id="scene" class="scene">
+          <img
+            src="img/passaro-1.png"
+            alt="Beija Flor Verde"
+            class="apresentacao-passaro"
+            id="apresentacao-passaro"
+            data-depth="0.2"
+          />
+        </div>
+      </div>
     </section>
     <!-- fecha -->
 
@@ -551,6 +556,7 @@
     <!-- scripts js -->
     <script src="js/plugins/splide.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
     <script src="js/script.js"></script>
   </body>

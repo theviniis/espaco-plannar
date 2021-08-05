@@ -18,7 +18,7 @@
   --colCinza: #ececec;
 
   /* Styles */
-  --gap: 8px;
+  --gap: 1ch;
   --padding: calc(var(--gap) * 6);
 }
 @font-face {
@@ -35,8 +35,8 @@ h1,
 ul,
 li,
 blockquote {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Global Styles */
@@ -87,7 +87,8 @@ blockquote,
 cite,
 li,
 input,
-textarea {
+textarea,
+buttons {
   font-size: clamp(
     var(--fluid-type-min, 1rem),
     calc(1rem + var(--fluid-type-target, 3vw)),
@@ -106,7 +107,8 @@ h3 {
 a,
 li,
 p,
-textarea {
+textarea,
+button {
   --fluid-type-max: 1.25rem;
 }
 blockquote,
@@ -133,7 +135,6 @@ cite {
   cursor: pointer;
   display: block;
   font-family: var(--fontFamP);
-  font-size: var(--fontSize1);
   letter-spacing: 0.1rem;
   min-width: min-content;
   outline: 0;

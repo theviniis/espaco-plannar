@@ -63,6 +63,7 @@ AOS.init();
         perPage: 1,
       },
       600: {
+        start: 1,
         perPage: 1,
         padding: {
           left: '0',
@@ -105,59 +106,8 @@ AOS.init();
     }
   });
   
-  
-  // create parallax effect on mouse movement
-  window.onload = function() {
-    var mainView = document.getElementById("apresentacao-passaro"),
-        pSpeed = 1, // determines speed & distance of background-image travel
-        _tmp = window
-            .getComputedStyle(mainView, null)
-            .backgroundPosition.trim()
-            .split(/\s+/),
-        positions = {
-            x: _tmp[0],
-            y: _tmp[1]
-        },
-        staticPercentX = parseInt(positions.x),
-        staticPercentY = parseInt(positions.y);
-  // On every mouse movement, grab mouse coordinates and pass them to the parallax function,
-  // along with the starting background-position and parallax speed.
-  window.onmousemove = function(e) {
-      e = e || window.event;
-      var x = e.clientX,
-          y = e.clientY;
-
-      mouseParallax(
-          "apresentacao-passaro",
-          staticPercentX,
-          staticPercentY,
-          x,
-          y,
-          pSpeed
-      );
-  };
-};
-
-function mouseParallax(id, percentX, percentY, mouseX, mouseY, speed) {
-  var viewBackgroundImage = document.getElementById(id);
-
-  var size = {
-      width: window.innerWidth / 2 || document.body.clientWidth / 2,
-      height: window.innerHeight / 2 || document.body.clientHeight / 2
-  };
-
-  var updatedXOffset = size.width - mouseX,
-      updatedYOffset = size.height - mouseY,
-      offsetX = updatedXOffset / size.width * speed,
-      offsetY = updatedYOffset / size.height * speed;
-  // 2D Parallax
-  viewBackgroundImage.style.backgroundPositionX = offsetX + percentX + "%";
-  viewBackgroundImage.style.backgroundPositionY = offsetY + percentY + "%";
-  // 3D Parallax
-  viewBackgroundImage.style.transform =
-      "rotateX(" + offsetY * 10 + "deg) rotateY(" + offsetX * 10 + "deg)";
-};
-
+  var scene = document.getElementById('scene');
+  var parallaxInstance = new Parallax(scene);
 } );
 
 
