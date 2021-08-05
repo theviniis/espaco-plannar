@@ -24,19 +24,31 @@
     transform: translateX(100%);
     z-index: 4;
   }
-  .menu.is-active {
-    padding-top: 10vh;
+  #hamburger-icon {
+    display: block;
   }
   .menu.is-active a {
     padding: 8px;
     color: white;
+  }
+  .menu.is-active .__logo {
+    place-self: center;
+    padding: 0;
+  }
+  .menu.is-active .logo {
+    fill: #fff;
+    background: #fff;
+    stroke: #fff;
+  }
+  .menu.is-active li {
+    margin-right: 15px;
   }
   .menu-social {
     display: flex;
     place-content: center;
     gap: 1.5rem;
   }
-  #hamburger-icon {
+  .menu .__logo {
     display: block;
   }
   .apresentacao {
@@ -84,6 +96,9 @@
   .modal ul {
     max-height: 500px;
     overflow-y: auto;
+  }
+  .formulario button {
+    top: 72%;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -134,7 +149,8 @@
   textarea,
   button,
   .apresentacao p,
-  .quem-sou p {
+  .quem-sou p,
+  footer .titulo {
     --fluid-type-max: 1rem;
   }
   h1,
@@ -207,6 +223,9 @@
   .contato .endereco {
     max-width: 64%;
     padding: 0;
+  }
+  .footer-logo {
+    max-width: 7rem;
   }
   .modal li {
     width: unset;

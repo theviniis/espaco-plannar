@@ -34,7 +34,6 @@ header.sticky .logo:first-child {
   z-index: 5;
   color: var(--verdeNoventa);
   font-size: 2.5rem;
-  margin: 8px 0;
 }
 .menu {
   position: relative;
@@ -61,9 +60,12 @@ header.sticky .logo:first-child {
   display: none;
   width: var(--minWidth);
 }
-.menu-social img {
+.menu-social .icon {
   width: 1.6rem;
   height: 1.6rem;
+}
+.menu .__logo {
+  display: none;
 }
 /* --------------- banner ---------------*/
 .banner {
@@ -268,7 +270,6 @@ img[class*="passaro"] {
   background-color: var(--verdeNoventa);
   padding: var(--padding) var(--minWidthP);
   position: relative;
-  overflow-x: hidden;
 }
 .investimento h3,
 .investimento p {
@@ -292,14 +293,13 @@ img[class*="passaro"] {
 }
 .investimento .container {
   position: absolute;
-  z-index: 1;
   right: 4%;
   top: -24%;
+  z-index: 1;
 }
 .passaro-2 {
   max-width: 80%;
 }
-
 /* -------------- contato -------------- */
 .contato {
   display: grid;
@@ -368,7 +368,7 @@ img[class*="passaro"] {
 .formulario button {
   position: absolute;
   justify-self: center;
-  bottom: 5px;
+  top: 78%;
   z-index: 2;
   text-transform: lowercase;
 }
@@ -423,8 +423,9 @@ footer a {
   gap: 8px;
 }
 
-.footer-social li,
-.footer-ctt li {
+.footer-social li a,
+.footer-ctt li,
+.footer-ctt li a {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
