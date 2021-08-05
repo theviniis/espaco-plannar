@@ -107,7 +107,11 @@ AOS.init();
   });
   
   var scene = document.getElementById('scene');
+  var scene1 = document.getElementById('investimento-scene');
+
   var parallaxInstance = new Parallax(scene);
+  var parallaxInstance = new Parallax(scene1);
+
 } );
 
 

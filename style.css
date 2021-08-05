@@ -217,7 +217,7 @@ header.sticky .logo:first-child {
   max-width: 80%;
 }
 img[class*="passaro"] {
-  filter: drop-shadow(5px 3px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(5px 3px 9px rgba(0, 0, 0, 0.4));
 }
 
 /* -------------- Seviços  -------------- */
@@ -259,7 +259,8 @@ img[class*="passaro"] {
 /* -------------- Investimento profissional -------------- */
 .investimento {
   display: grid;
-  grid-template-columns: 0.6fr 1.4fr 0.5fr;
+  grid-template-columns: 0.6fr 1.4fr minmax(100px, 0.5fr);
+  grid-auto-rows: min-content;
   gap: 2rem;
   align-items: center;
   justify-items: flex-start;
@@ -290,11 +291,14 @@ img[class*="passaro"] {
   flex-direction: column;
   gap: var(--padding);
 }
-.passaro-2 {
+.investimento .container {
   position: absolute;
   z-index: 1;
-  right: 1%;
-  top: -22%;
+  right: 4%;
+  top: -24%;
+}
+.passaro-2 {
+  max-width: 80%;
 }
 
 /* -------------- contato -------------- */
@@ -377,111 +381,6 @@ img[class*="passaro"] {
 .contato .logo {
   padding-top: 5rem;
 }
-
-@-webkit-keyframes animate-svg-stroke-1 {
-  0% {
-    stroke-dashoffset: 5980.55224609375px;
-    stroke-dasharray: 5980.55224609375px;
-  }
-
-  100% {
-    stroke-dashoffset: 11961.1044921875px;
-    stroke-dasharray: 5980.55224609375px;
-  }
-}
-
-@keyframes animate-svg-stroke-1 {
-  0% {
-    stroke-dashoffset: 5980.55224609375px;
-    stroke-dasharray: 5980.55224609375px;
-  }
-
-  100% {
-    stroke-dashoffset: 11961.1044921875px;
-    stroke-dasharray: 5980.55224609375px;
-  }
-}
-
-@-webkit-keyframes animate-svg-fill-1 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(18, 126, 123);
-  }
-}
-
-@keyframes animate-svg-fill-1 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(18, 126, 123);
-  }
-}
-
-.ctt-path .svg-elem-1 {
-  -webkit-animation: animate-svg-stroke-1 3s ease-in 0s both,
-    animate-svg-fill-1 1.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.8s both;
-  animation: animate-svg-stroke-1 3s ease-in 0s both,
-    animate-svg-fill-1 1.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.8s both;
-}
-
-@-webkit-keyframes animate-svg-stroke-2 {
-  0% {
-    stroke-dashoffset: 314.8636779785156px;
-    stroke-dasharray: 314.8636779785156px;
-  }
-
-  100% {
-    stroke-dashoffset: 629.7273559570312px;
-    stroke-dasharray: 314.8636779785156px;
-  }
-}
-
-@keyframes animate-svg-stroke-2 {
-  0% {
-    stroke-dashoffset: 314.8636779785156px;
-    stroke-dasharray: 314.8636779785156px;
-  }
-
-  100% {
-    stroke-dashoffset: 629.7273559570312px;
-    stroke-dasharray: 314.8636779785156px;
-  }
-}
-
-@-webkit-keyframes animate-svg-fill-2 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(248, 248, 248);
-  }
-}
-
-@keyframes animate-svg-fill-2 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(248, 248, 248);
-  }
-}
-
-.ctt-path .svg-elem-2 {
-  -webkit-animation: animate-svg-stroke-2 3s ease-in 0.12s both,
-    animate-svg-fill-2 1.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-      1.9000000000000001s both;
-  animation: animate-svg-stroke-2 3s ease-in 0.12s both,
-    animate-svg-fill-2 1.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-      1.9000000000000001s both;
-}
-
 /* -------------- footer -------------- */
 footer {
   display: grid;
