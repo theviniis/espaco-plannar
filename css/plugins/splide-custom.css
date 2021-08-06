@@ -17,7 +17,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 45vw;
+  width: 90ch;
   z-index: 2;
 }
 .depoimentos .splide__slide:not(.is-active) {

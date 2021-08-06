@@ -3,12 +3,20 @@
     padding-top: 0;
   }
 }
-@media only screen and (max-width: 1200px) {
-  :root {
-    --minWidth: 85vw;
+@media only screen and (max-width: 1327px) {
+  .header nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
   }
-  .header {
-    justify-content: center;
+  .header nav a {
+    grid-column: 2;
+    justify-self: center;
+  }
+  #hamburger-icon {
+    display: block;
+    grid-column: 3;
+    justify-self: flex-end;
   }
   .menu {
     display: flex;
@@ -24,32 +32,30 @@
     transform: translateX(100%);
     z-index: 4;
   }
-  #hamburger-icon {
-    display: block;
-  }
   .menu.is-active a {
     padding: 8px;
     color: white;
-  }
-  .menu.is-active .__logo {
-    place-self: center;
-    padding: 0;
-  }
-  .menu.is-active .logo {
-    fill: #fff;
-    background: #fff;
-    stroke: #fff;
   }
   .menu.is-active li {
     margin-right: 15px;
   }
   .menu-social {
     display: flex;
-    place-content: center;
-    gap: 1.5rem;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 1rem;
   }
-  .menu .__logo {
+  .menu.is-active .__logo {
     display: block;
+    padding: 0;
+    fill: #fff;
+    background: #fff;
+    stroke: #fff;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  :root {
+    --minWidth: 85vw;
   }
   .apresentacao {
     grid-template-columns: 1fr;
@@ -73,7 +79,7 @@
     display: none;
   }
   .depoimentos .custom-arrows {
-    width: 58vw;
+    width: 58%;
   }
   .header {
     justify-content: center;
@@ -102,7 +108,6 @@
   }
 }
 @media only screen and (max-width: 900px) {
-  .header,
   .banner_item {
     grid-template-columns: minmax(300px, 1fr);
   }
@@ -115,7 +120,7 @@
     max-width: var(--minWidth);
   }
   .depoimentos .custom-arrows {
-    width: 60vw;
+    width: 64%;
   }
   .investimento {
     grid-template-columns: 0.3fr 1.7fr;
@@ -161,6 +166,11 @@
   }
   .header nav {
     align-items: center;
+  }
+  .menu-social,
+  .__logo {
+    justify-content: center;
+    place-self: center;
   }
   .quebra {
     display: none;
@@ -224,8 +234,8 @@
     max-width: 64%;
     padding: 0;
   }
-  .footer-logo {
-    max-width: 7rem;
+  .footer-logo img {
+    max-width: 8rem;
   }
   .modal li {
     width: unset;

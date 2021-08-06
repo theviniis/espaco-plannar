@@ -2,10 +2,7 @@
   <defs>
     <style>
       .cls-2 {
-        fill: #fff;
-        color: #fff;
-        background: #fff;
-        stroke: #fff;
+        fill: transparent;
       }
     </style>
   </defs>

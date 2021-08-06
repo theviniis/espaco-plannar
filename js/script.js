@@ -86,10 +86,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   const mobileMenu = document.getElementById("hamburger-icon");
   const menu = document.querySelector(".menu");
-  mobileMenu.addEventListener("click", toggleMenu);
 
   const closeMenu = document.querySelectorAll(".menu > li > a");
-  closeMenu.forEach((link) => link.addEventListener("click", toggleMenu));
+  mobileMenu.addEventListener("click", toggleMenu);
+  closeMenu.forEach((link) =>
+    link.addEventListener("click", function () {
+      if (menu.classList.contains("is-active")) {
+        return toggleMenu();
+      }
+    }),
+  );
 
   window.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && menu.classList.contains("is-active")) {
