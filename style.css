@@ -188,9 +188,9 @@ header.sticky .logo:first-child {
   position: relative;
 }
 .apresentacao-img {
-  max-width: 100%;
-  height: 100%;
   grid-area: img;
+  background-image: url(/img/apresentacao-img@2x.jpg);
+  background-position: center;
 }
 .apresentacao-conteudo {
   grid-area: ctt;

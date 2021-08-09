@@ -68,10 +68,6 @@
   .apresentacao-passaro {
     max-width: 60%;
   }
-  .apresentacao #container,
-  .investimento .container {
-    display: none;
-  }
   .servicos .custom-arrows {
     width: var(--minWidth);
   }
@@ -86,6 +82,10 @@
   }
   .investimento {
     grid-template-columns: 0.6fr 1.4fr 0.1fr;
+  }
+  .investimento .container,
+  .apresentacao #container {
+    display: none;
   }
   .contato .endereco {
     max-width: 25vw;
