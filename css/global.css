@@ -42,7 +42,7 @@ blockquote {
 /* Global Styles */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 15vh;
+  scroll-padding-top: 12vh;
 }
 body {
   background-color: var(--bodyColor);

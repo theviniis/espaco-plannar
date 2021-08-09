@@ -380,6 +380,15 @@ img[class*="passaro"] {
   padding-top: 5rem;
   padding-bottom: 3rem;
 }
+/* -------------- whatsapp btn -------------- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 3%;
+  right: 1%;
+}
+.whatsapp-btn img {
+  max-width: 12rem;
+}
 /* -------------- footer -------------- */
 footer {
   display: grid;
