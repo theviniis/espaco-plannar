@@ -48,9 +48,10 @@
   .menu.is-active .__logo {
     display: block;
     padding: 0;
-    fill: #fff;
-    background: #fff;
-    stroke: #fff;
+    filter: grayscale(1) invert(1) brightness(1.7);
+  }
+  .menu.is-active .__logo img {
+    mix-blend-mode: difference;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -58,7 +59,7 @@
     --minWidth: 85vw;
   }
   .apresentacao {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.5fr 1fr;
     grid-template-areas: "img ctt";
   }
   .apresentacao #container {

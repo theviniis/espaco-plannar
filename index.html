@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +8,11 @@
     <!-- Titulo -->
     <title>Espaço Plannar</title>
     <link rel="icon" href="icon/favicon-16x16.png" />
+
+    <script type="module">
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,6 +36,30 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Descubra o que é essa tão famosa psicoterapia?"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Espaço Plannar" />
+    <meta
+      property="og:description"
+      content="Descubra o que é essa tão famosa psicoterapia?"
+    />
+    <meta property="og:url" content="https://www.espacoplannar.blogspot.com/" />
+    <meta
+      property="og:image"
+      content="https://www.espacoplannar.blogspot.com/img/quem-sou.jpg"
+    />
+    <meta property="og:image:alt" content="Paula Rocha - Espaço Plannar" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      name="twitter:card"
+      content="https://www.espacoplannar.blogspot.com/img/quem-sou.jpg"
+    />
+    <link rel="canonical" href="https://www.mywebsite.com/page" />
   </head>
 
   <body>
@@ -94,7 +123,14 @@
         <ul class="splide__list">
           <!-- banner 1 -->
           <li class="splide__slide banner_item">
-            <img src="img/banner-1.png" alt="banner espaço plannar" />
+            <picture>
+              <source
+                srcset="img/banner-mobile-1.png"
+                alt="Bem vindo(a) ao Espaço Plannar"
+                media="(max-width: 600px)"
+              />
+              <img src="img/banner-1.png" alt="banner espaço plannar" />
+            </picture>
           </li>
           <!-- banner 2 -->
           <li class="splide__slide banner_item">
@@ -183,7 +219,7 @@
           humana, pois sei que cada um pode transformar o outro com um simples
           toque de generosidade.
         </p>
-        <img src="img/quem-sou@2x.jpg" alt="Paula Rocha" class="quem-sou-img" />
+        <img src="img/quem-sou.jpg" alt="Paula Rocha" class="quem-sou-img" />
       </article>
     </section>
     <!-- fecha quem sou -->
@@ -248,7 +284,7 @@
     <!-- fecha depoimentos -->
 
     <!-- abre apresentacao -->
-    <section class="apresentacao" id="apresentacao" data-relative-input="true">
+    <section class="apresentacao" id="apresentacao" data-aos="fade-up">
       <div
         class="apresentacao-img"
         data-aos="fade-right"
@@ -281,9 +317,9 @@
       <div
         id="container"
         class="container"
-        data-aos="fade-up-right"
+        data-aos="slide-right"
         data-aos-easing="ease-in-sine"
-        data-aos-delay="500"
+        data-aos-delay="300"
         data-aos-duration="650"
       >
         <div id="scene" class="scene">
@@ -321,6 +357,7 @@
               Carreira estável e com êxito, mesmo sendo seres humanos que
               estamos em constante evolução e movimento.
             </p>
+            <a href="#" title="expandir texto" class="servicos-btn">ver mais</a>
           </li>
           <li class="splide__slide">
             <img src="img/servicos-2.svg" alt="Plantão Psicológico" />
@@ -375,16 +412,16 @@
     <section class="investimento" data-aos="fade-up">
       <div
         class="container"
-        data-aos="fade-up-left"
+        data-aos="slide-left"
         data-aos-easing="ease-in-sine"
-        data-aos-delay="500"
+        data-aos-delay="300"
         data-aos-duration="650"
       >
         <div id="investimento-scene" class="scene">
           <img
             src="img/passaro-2.png"
             alt="Beija flor verde"
-            class="passaro-2"
+            class="passar]o-2"
             data-depth="0.2"
           />
         </div>
@@ -460,9 +497,16 @@
       <img src="img/logo.svg" alt="Espaço Plannar" class="logo full-bleed" />
     </section>
     <!-- fecha contato -->
-    <a href="https://wa.me/+5511977812979" target="_blank" class="whatsapp-btn"
+
+    <!-- abre whatsapp-btn -->
+    <a
+      href="https://wa.me/+5511977812979"
+      target="_blank"
+      class="whatsapp-btn"
+      data-aos="fade-up"
       ><img src="img/whatsapp-btn.png" alt="Fale conosco pelo Whatsapp"
     /></a>
+    <!-- fecha whatsapp-btn -->
 
     <!-- abre footer -->
     <footer>

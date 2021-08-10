@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Simple Anime
-  AOS.init();
+  AOS.init({
+    useClassNames: true,
+  });
 
   // Splide Banner
   new Splide(".banner", {
@@ -40,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gap: "10ch",
     pagination: false,
     updateOnMove: true,
+    autoHeight: true,
     type: "loop",
     padding: {
       left: "30ch",
