@@ -109,6 +109,10 @@
   }
 }
 @media only screen and (max-width: 900px) {
+  .logo {
+    transition: 0.3s ease-in-out;
+    max-width: 6rem;
+  }
   header.sticky .logo:first-child {
     max-width: 6rem;
   }
@@ -176,6 +180,9 @@
   .__logo {
     justify-content: center;
     place-self: center;
+  }
+  .banner {
+    margin-top: 18]vh;
   }
   .quebra {
     display: none;
