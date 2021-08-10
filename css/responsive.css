@@ -109,6 +109,9 @@
   }
 }
 @media only screen and (max-width: 900px) {
+  header.sticky .logo:first-child {
+    max-width: 6rem;
+  }
   .banner_item {
     grid-template-columns: minmax(300px, 1fr);
   }
