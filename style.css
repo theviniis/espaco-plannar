@@ -219,8 +219,8 @@ img[class*="passaro"] {
   filter: drop-shadow(5px 3px 9px rgba(0, 0, 0, 0.4));
 }
 html:not(.no-js) [data-aos="slide-right"] {
-  -webkit-transform: translate3d(-20%, 20%, 0);
-  transform: translate3d(-20%, 20%, 0);
+  -webkit-transform: translate3d(-15%, 15%, 0);
+  transform: translate3d(-15%, 15%, 0);
 }
 
 /* -------------- Seviços  -------------- */
